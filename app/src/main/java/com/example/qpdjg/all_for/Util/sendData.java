@@ -1,4 +1,4 @@
-package com.example.qpdjg.all_for;
+package com.example.qpdjg.all_for.Util;
 
 public class sendData {
 

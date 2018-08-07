@@ -101,8 +101,8 @@ public class BottomTab  extends LinearLayout {
         catagoryTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.light_blue));
     }
     private void offCatagory(){
-        homeImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.category_color));
-        homeTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
+        catagoryImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.category_gray));
+        catagoryTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
     }
 
     private void activeMypage(){

@@ -1,6 +1,7 @@
 package com.example.qpdjg.all_for.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,7 +18,7 @@ public class SplashActivity  extends Activity {
         Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                finish();    // 액티비티 종료
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             }
         };
         handler.sendEmptyMessageDelayed(0, 1500);

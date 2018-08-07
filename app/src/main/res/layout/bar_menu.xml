@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/menu_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/menu_homeImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home_gray"
+                />
+            <TextView
+                android:id="@+id/menu_homeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textSize="13dp"
+                android:textColor="@color/dark"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_catagory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/menu_catagoryImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/category_gray"
+                />
+            <TextView
+                android:id="@+id/menu_catagoryTxt"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:gravity="center"
+                android:text="@string/catagory"
+                android:textSize="13dp"
+                android:textColor="@color/dark"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_mypage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/menu_mypageImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/mypage_gray"
+                />
+            <TextView
+                android:id="@+id/menu_mypageTxt"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:gravity="center"
+                android:text="@string/mypage"
+                android:textSize="13dp"
+                android:textColor="@color/dark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

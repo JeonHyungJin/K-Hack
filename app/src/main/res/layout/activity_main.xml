@@ -49,15 +49,6 @@
         android:hint="Enter Name"
         android:inputType="text" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="center_horizontal"
-        android:hint="관리자 여부"
-        />
-
     <Button
         android:id="@+id/buttonSignup"
         android:layout_width="200dp"

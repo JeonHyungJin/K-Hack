@@ -22,6 +22,9 @@
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.FindActivity"/>
         <activity android:name=".Activity.SignUpActicity"/>
+        <activity android:name=".Activity.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
     </application>
 
 </manifest>

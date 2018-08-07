@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ProgressDialog progressDialog;
     //define firebase object
     FirebaseAuth firebaseAuth;
-    CheckBox checkBox;
     private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mReference = mDatabase.getReference();
     private ChildEventListener mChild;
@@ -56,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textviewMessage = (TextView) findViewById(R.id.textviewMessage);
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
         progressDialog = new ProgressDialog(this);
-        checkBox = findViewById(R.id.checkBox);
         editTextName = findViewById(R.id.editTextName);
         //button click event
         buttonSignup.setOnClickListener(this);
@@ -70,12 +67,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String tokenID = FirebaseInstanceId.getInstance().getToken();
         //        mReference.child("message").push().setValue("2");
         mReference = mDatabase.getReference("UserProfile");
-        Boolean ms1 = checkBox.isChecked();
         if(!TextUtils.isEmpty(tokenID)) {
             sendData SendData = new sendData();
             SendData.firebaseKey = tokenID;
             SendData.UserName = editTextName.getText().toString().trim();
-            SendData.GalleryOwner = ms1.toString();
+            SendData.Point = 0;
             mReference.child(tokenID).setValue(SendData);
         }
 

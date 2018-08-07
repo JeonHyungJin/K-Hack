@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#7ab9fd"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,13 +16,7 @@
         android:layout_marginTop="50dp"
         android:textSize="23dp"
         android:textColor="@color/colorAccent"
-        android:text="회원가입" />
-
-    <TextView
-        android:layout_gravity="center_horizontal"
-        android:text="이 앱은 회원가입을 해야 정상적으로 사용할 수 있습니다.\n Email로 등록해 주세요."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:text="로그인" />
 
     <EditText
         android:id="@+id/editTextEmail"
@@ -40,39 +36,36 @@
         android:hint="Enter password"
         android:inputType="textPassword" />
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="250dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Enter Name"
-        android:inputType="text" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="center_horizontal"
-        android:hint="관리자 여부"
-        />
-
     <Button
         android:id="@+id/buttonSignup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_gravity="center_horizontal"
-        android:text="회원가입" />
+        android:text="로그인" />
 
-    <TextView
-        android:text="회원이시면 여기에서 로그인 해주세요."
-        android:id="@+id/textViewSignin"
-        android:textAlignment="center"
-        android:layout_margin="15dp"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="신규 회원가입"
+            android:id="@+id/textViewSignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="패스워드가 기억나지 않습니까?"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/textViewFindpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 
     <TextView
         android:layout_gravity="center_horizontal"
@@ -82,4 +75,4 @@
         android:layout_height="wrap_content" />
 
 
-</LinearLayout>
+    </LinearLayout>

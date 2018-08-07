@@ -1,6 +1,7 @@
 package com.example.qpdjg.all_for.Custom;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,8 +56,66 @@ public class BottomTab  extends LinearLayout {
         catagoryTxt = (TextView)findViewById(R.id.menu_catagoryTxt);
         mypageTxt = (TextView)findViewById(R.id.menu_mypageTxt);
 
+        home.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activeHome();
+                offCatagory();
+                offMypage();
+                homePressed();
+            }
+        });
+
+        catagory.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                offHome();
+                activeCatagory();
+                offMypage();
+                catgoryPressed();
+            }
+        });
+
+        mypage.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                offHome();
+                offCatagory();
+                activeMypage();
+                mypagePressed();
+            }
+        });
     }
 
+    private void activeHome(){
+        homeImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.home_color));
+        homeTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.light_blue));
+    }
+    private void offHome(){
+        homeImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.home_gray));
+        homeTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
+    }
 
+    private void activeCatagory(){
+        catagoryImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.category_color));
+        catagoryTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.light_blue));
+    }
+    private void offCatagory(){
+        homeImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.category_color));
+        homeTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
+    }
+
+    private void activeMypage(){
+        mypageImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.mypage_color));
+        mypageTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.light_blue));
+    }
+    private void offMypage(){
+        mypageImg.setBackground(ContextCompat.getDrawable(getContext(),R.drawable.mypage_gray));
+        mypageTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
+    }
+
+    public void homePressed(){}
+    public void catgoryPressed(){}
+    public void mypagePressed(){}
 
 }

@@ -4,6 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.qpdjg.all_for.Adater.ViewpagerAdater;
 import com.example.qpdjg.all_for.R;
 import com.example.qpdjg.all_for.Util.sendData;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,14 +28,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity  {
+    int MAX_PAGE=3;
+    Fragment cur_fragment=new Fragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ViewPager viewPager=(ViewPager)findViewById(R.id.viewpager);
+        viewPager.setAdapter(new ViewpagerAdater(getSupportFragmentManager(),3));
     }
-    //Firebse creating a new user
-
 }

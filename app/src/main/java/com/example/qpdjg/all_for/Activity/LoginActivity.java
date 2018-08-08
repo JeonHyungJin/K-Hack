@@ -23,6 +23,10 @@ import org.w3c.dom.Text;
 import static com.example.qpdjg.all_for.R.string.progess_in_login;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
+
     //define view objects
     EditText editTextEmail;
     EditText editTextPassword;
@@ -111,6 +115,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(view == textviewFindPassword) {
             finish();
             startActivity(new Intent(this, FindActivity.class));
+        }
+    }
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), R.string.double_press_end, Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -54,8 +54,8 @@
             android:id="@+id/imageView5"
             android:layout_width="20dp"
             android:layout_height="30dp"
-            android:layout_weight="1"
             android:layout_marginTop="10dp"
+            android:layout_weight="1"
             app:srcCompat="@drawable/email" />
     </LinearLayout>
 

@@ -31,5 +31,6 @@
     <string name="signup_error_type">이미 등록된 이메일이거나 비밀번호가 6자리 이상이 아닙니다.</string>
     <string name="signup_error">회원 가입 에러</string>
     <string name="password_notequal">비밀 번호가 일치하지 않습니다.</string>
+    <string name="startapp">시작하려면 버튼을 누르십시오.</string>
 
 </resources>

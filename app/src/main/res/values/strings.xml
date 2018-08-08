@@ -31,4 +31,5 @@
     <string name="signup_error_type">Email already registered or password is not longer than 6 digits.</string>
     <string name="signup_error">SignUp error</string>
     <string name="password_notequal">The secret number does not match.</string>
+    <string name="startapp">Press button to start.</string>
 </resources>

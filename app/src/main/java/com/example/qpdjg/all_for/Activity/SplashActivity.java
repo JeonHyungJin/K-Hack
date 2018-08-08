@@ -19,6 +19,7 @@ public class SplashActivity  extends Activity {
             @Override
             public void handleMessage(Message msg) {
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         };

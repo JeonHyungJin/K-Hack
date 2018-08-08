@@ -32,5 +32,7 @@
     <string name="signup_error">会員加入エラー</string>
     <string name="password_notequal">暗証番号が一致しません。</string>
     <string name="startapp">開始するには、ボタンをクリックします。</string>
+    <string name="double_press_end">後ろに戻るボタンをもう一度押せば消えます。</string>
+
 
 </resources>

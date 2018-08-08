@@ -32,5 +32,6 @@
     <string name="signup_error">会员加入错误</string>
     <string name="password_notequal">密码不一致。</string>
     <string name="startapp">要开始的话请按下按钮。</string>
+    <string name="double_press_end">再按下一次键就会熄灭。</string>
 
 </resources>

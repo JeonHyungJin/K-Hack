@@ -32,4 +32,5 @@
     <string name="signup_error">SignUp error</string>
     <string name="password_notequal">The secret number does not match.</string>
     <string name="startapp">Press button to start.</string>
+    <string name="double_press_end">Press the Back button one more time to turn it off.</string>
 </resources>

@@ -9,19 +9,21 @@
     tools:context=".Activity.MainActivity">
 
     <TextView
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/find_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:textSize="23dp"
+        android:text="암호찾기"
         android:textColor="@color/colorAccent"
-        android:text="암호찾기" />
+        android:textSize="23dp" />
 
     <TextView
-        android:text="등록한 Email을 입력해 주세요/"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/find_explain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="등록한 Email을 입력해 주세요/" />
 
     <EditText
         android:id="@+id/editTextUserEmail"

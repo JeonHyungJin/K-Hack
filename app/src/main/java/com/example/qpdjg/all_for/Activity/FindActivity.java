@@ -28,11 +28,19 @@ public class FindActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
+        TextView find_password = (TextView)findViewById(R.id.find_password);
+        TextView find_explain = (TextView)findViewById(R.id.find_explain);
         editTextUserEmail = (EditText) findViewById(R.id.editTextUserEmail);
         buttonFind = (Button) findViewById(R.id.buttonFind);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         buttonFind.setOnClickListener(this);
+
+
+        //언어 별 처리
+        find_password.setText(R.string.find_password);
+        find_explain.setText(R.string.find_password_explain);
+        buttonFind.setText(R.string.find_password_send);
     }
     @Override
     public void onClick(View view) {

@@ -31,6 +31,6 @@
     <string name="signup_error_type">すでに登録されたメールや暗証番号が6桁以上がありません。</string>
     <string name="signup_error">会員加入エラー</string>
     <string name="password_notequal">暗証番号が一致しません。</string>
-
+    <string name="startapp">開始するには、ボタンをクリックします。</string>
 
 </resources>

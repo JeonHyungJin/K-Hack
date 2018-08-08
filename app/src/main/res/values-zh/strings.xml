@@ -31,6 +31,6 @@
     <string name="signup_error_type">已登记的邮箱或密码不超过6位数。</string>
     <string name="signup_error">会员加入错误</string>
     <string name="password_notequal">密码不一致。</string>
-
+    <string name="startapp">要开始的话请按下按钮。</string>
 
 </resources>

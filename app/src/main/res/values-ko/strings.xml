@@ -20,7 +20,13 @@
     <string name="inprogress">처리중입니다. 잠시 기다려주세요 ..</string>
     <string name="plz_enter_email">email을 입력해 주세요.</string>
     <string name="plz_enter_Password">password를 입력해 주세요.</string>
-    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
+    <string name="progess_in_login">로그인 중 입니다. 잠시 기다려주세요...</string>
     <string name="fail_login">로그인 실패!</string>
-    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
+    <string name="why_fail">비밀번호가 틀렸거나 인터넷 연결이 되어 있지 않습니다.</string>
+    <string name="process_wait">처리중입니다. 잠시 기다려 주세요...</string>
+    <string name="enter_email">Email을 입력해 주세요.</string>
+    <string name="enter_password">비밀번호를 입력해 주세요.</string>
+    <string name="signup_error_type">이미 등록된 이메일이거나 비밀번호가 6자리 이상이 아닙니다.</string>
+    <string name="signup_error">회원 가입 에러</string>
+
 </resources>

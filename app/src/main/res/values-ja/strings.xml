@@ -11,7 +11,7 @@
     <string name="find">パスワード忘れ</string>
     <string name="Signup">会員加入</string>
     <string name="Signup_explain">会員加入がアプリは、会員加入をすれば正常的に使用することができます。 Emailを登録してください。</string>
-    <string name="If_member_signin">会員んでしたら、このところを押してログインをしてください。</string>
+    <string name="If_member_signin">会員んでしたら、<font fgcolor="#96A8F4">このところ</font>を押してログインをしてください。</string>
     <string name="find_password">暗号探し</string>
     <string name="find_password_explain">登録したe-mailを入力してください。</string>
     <string name="find_password_send">E-mail 送信</string>
@@ -20,13 +20,17 @@
     <string name="inprogress">処理中です。 少々お待ちください。</string>
     <string name="plz_enter_email">emailを入力してください。</string>
     <string name="plz_enter_Password">暗証番号をご入力ください</string>
+    <string name="plz_enter_Name">名前を入力してください。</string>
     <string name="progess_in_login">ログイン中です。 少々お待ちください...</string>
     <string name="fail_login">ログイン失敗!</string>
     <string name="why_fail">暗証番号が間違ったり、インターネット連結されていません。</string>
     <string name="process_wait">処理中です。 しばらく待ってください。</string>
     <string name="enter_email">Emailを入力してください。</string>
     <string name="enter_password">暗証番号をご入力ください。</string>
+    <string name="enter_name">名前を入力してください。</string>
     <string name="signup_error_type">すでに登録されたメールや暗証番号が6桁以上がありません。</string>
     <string name="signup_error">会員加入エラー</string>
+    <string name="password_notequal">暗証番号が一致しません。</string>
+
 
 </resources>

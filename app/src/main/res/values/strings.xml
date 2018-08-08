@@ -9,9 +9,9 @@
     <string name="password">Enter password</string>
     <string name="newenter">New customer? Start here.</string>
     <string name="find">Forgot your password?</string>
-    <string name="Signup">SignUp</string>
+    <string name="Signup">Sign Up</string>
     <string name="Signup_explain">The app for sign - up requires membership to be used normally. Please register by e-mail.</string>
-    <string name="If_member_signin">If you are a member, please click here to sign in.</string>
+    <string name="If_member_signin">If you are a member, please <font fgcolor="#96A8F4">click here</font> to sign in.</string>
     <string name="find_password">Find Password</string>
     <string name="find_password_explain">Enter registered E-mail.</string>
     <string name="find_password_send">Send E-mail</string>
@@ -20,12 +20,15 @@
     <string name="inprogress">Processing. Please wait..</string>
     <string name="plz_enter_email">Enter email.</string>
     <string name="plz_enter_Password">Enter password.</string>
+    <string name="plz_enter_Name">Enter Name.</string>
     <string name="progess_in_login">Login in progress. Just a moment, please...</string>
     <string name="fail_login">Login Failed!</string>
     <string name="why_fail">Incorrect password or no Internet connection.</string>
     <string name="process_wait">Processing. Please wait...</string>
     <string name="enter_email">Enter email.</string>
     <string name="enter_password">Please enter your password.</string>
+    <string name="enter_name">Please enter your name.</string>
     <string name="signup_error_type">Email already registered or password is not longer than 6 digits.</string>
     <string name="signup_error">SignUp error</string>
+    <string name="password_notequal">The secret number does not match.</string>
 </resources>

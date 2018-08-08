@@ -29,6 +29,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     //define view objects
     EditText editTextEmail;
     EditText editTextPassword;
+    EditText editTextPassword_confirm;
     EditText editTextName;
     Button buttonSignup;
     TextView textviewSingin;
@@ -57,6 +58,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextPassword_confirm = (EditText)findViewById(R.id.editTextPassword_confirm);
         textviewSingin= (TextView) findViewById(R.id.textViewSignin);
         textviewMessage = (TextView) findViewById(R.id.textviewMessage);
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
@@ -67,6 +69,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         textviewSingin.setOnClickListener(this);
 
         //언어별로 변경되는 부분
+        editTextEmail.setHint(R.string.plz_enter_email);
+        editTextPassword.setHint(R.string.plz_enter_Password);
+        editTextPassword_confirm.setHint(R.string.plz_enter_Password);
+        editTextName.setHint(R.string.plz_enter_Name);
         Signup_text.setText(R.string.Signup);
         Signup_explain_text.setText(R.string.Signup_explain);
         buttonSignup.setText(R.string.Signup);
@@ -78,6 +84,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         //사용자가 입력하는 email, password를 가져온다.
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String password_confirm = editTextPassword_confirm.getText().toString().trim();
         String tokenID = FirebaseInstanceId.getInstance().getToken();
         //        mReference.child("message").push().setValue("2");
         mReference = mDatabase.getReference("UserProfile");
@@ -96,7 +103,17 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
         if(TextUtils.isEmpty(password)){
             Toast.makeText(this, R.string.enter_password, Toast.LENGTH_SHORT).show();
+            return;
         }
+        if(!(password.equals(password_confirm))){
+            Toast.makeText(this, R.string.password_notequal, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(editTextName.getText().toString().trim().equals("")){
+            Toast.makeText(this, R.string.enter_name, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //email과 password가 제대로 입력되어 있다면 계속 진행된다.
         progressDialog.setMessage(getResources().getString(R.string.process_wait));
         progressDialog.show();

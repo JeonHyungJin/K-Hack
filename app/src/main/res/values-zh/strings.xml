@@ -20,13 +20,17 @@
     <string name="inprogress">处理中。 稍等一下。</string>
     <string name="plz_enter_email">请输入email。</string>
     <string name="plz_enter_Password">请输入密码。</string>
+    <string name="plz_enter_Name">请输入名字。</string>
     <string name="progess_in_login">正在登录。 稍等一下...</string>
     <string name="fail_login">登录失败!</string>
     <string name="why_fail">密码错误或无法连接网络。</string>
     <string name="process_wait">处理中。 请稍等一下。</string>
     <string name="enter_email">请输入Email。</string>
     <string name="enter_password">请输入密码。</string>
+    <string name="enter_name">请输入名字。</string>
     <string name="signup_error_type">已登记的邮箱或密码不超过6位数。</string>
     <string name="signup_error">会员加入错误</string>
+    <string name="password_notequal">密码不一致。</string>
+
 
 </resources>

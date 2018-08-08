@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     //define view objects
     EditText editTextEmail;
@@ -24,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button buttonSignin;
     TextView textviewSingin;
     TextView textviewMessage;
+    TextView logintext;
     TextView textviewFindPassword;
     ProgressDialog progressDialog;
     //define firebase object
@@ -40,6 +44,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //그리고 profile 액티비티를 연다.
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class)); //추가해 줄 ProfileActivity
         }
+
+        //log-in 객체 생성
+        logintext = (TextView) findViewById(R.id.login);
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -52,6 +59,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonSignin.setOnClickListener(this);
         textviewSingin.setOnClickListener(this);
         textviewFindPassword.setOnClickListener(this);
+        //언어별 text 설정
+        logintext.setText(R.string.login);
+        editTextEmail.setText(R.string.email);
+        editTextPassword.setText(R.string.password);
+        buttonSignin.setText(R.string.loginbutton);
+        textviewSingin.setText(R.string.newenter);
+        textviewFindPassword.setText(R.string.find);
+
     }
     //firebase userLogin method
     private void userLogin(){

@@ -10,6 +10,7 @@
     tools:context=".Activity.MainActivity">
 
     <TextView
+        android:id="@+id/login"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,28 +45,6 @@
         android:layout_gravity="center_horizontal"
         android:text="로그인" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:text="신규 회원가입"
-            android:id="@+id/textViewSignin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:text="패스워드가 기억나지 않습니까?"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="16dp"
-            android:id="@+id/textViewFindpassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
 
     <TextView
         android:layout_gravity="center_horizontal"
@@ -74,5 +53,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewSignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Member Register" />
+
+        <TextView
+            android:id="@+id/textViewFindpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Don't remember password?"
+            android:textColor="@color/colorAccent"
+            android:visibility="visible" />
 
     </LinearLayout>
+
+
+</LinearLayout>

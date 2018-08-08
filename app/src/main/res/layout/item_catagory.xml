@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="60dp">
-
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:gravity="center|left">
+    <ImageView
+        android:id="@+id/catagory_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/transport"
+        android:layout_marginLeft="17dp"/>
+    <TextView
+        android:id="@+id/cataory_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center"
+        android:layout_marginLeft="7dp"
+        android:text="sdadasdasddsadjk"
+        android:textSize="18dp"
+        android:textColor="#636363"
+        />
 </LinearLayout>

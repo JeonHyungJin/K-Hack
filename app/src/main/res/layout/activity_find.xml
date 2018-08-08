@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/light_blue"
+    android:background="@color/White"
     tools:context=".Activity.MainActivity">
 
     <TextView
@@ -13,38 +13,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="암호찾기"
-        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textColor="@color/light_blue"
         android:textSize="23dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue" />
 
     <TextView
         android:id="@+id/find_explain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:text="등록한 Email을 입력해 주세요/" />
 
-    <EditText
-        android:id="@+id/editTextUserEmail"
-        android:layout_width="250dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="center_horizontal"
-        android:hint="Enter email"
-        android:inputType="textEmailAddress" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextUserEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/email" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonFind"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
+        android:background="@color/light_blue"
         android:layout_gravity="center_horizontal"
+        android:textColor="@color/White"
         android:text="Email 발송" />
 
     <TextView
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/light_blue"
         android:id="@+id/textviewMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

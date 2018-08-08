@@ -1,5 +1,6 @@
 package com.example.qpdjg.all_for.Activity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.qpdjg.all_for.Adater.ViewpagerAdater;
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.TitlebarActivity;
 import com.example.qpdjg.all_for.Util.sendData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,7 +30,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends TitlebarActivity {
     int MAX_PAGE=3;
     Fragment cur_fragment=new Fragment();
     @Override

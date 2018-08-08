@@ -3,6 +3,7 @@
     <string name="home">home</string>
     <string name="mypage">my page</string>
     <string name="catagory">catagory</string>
+    <string name="catagoryCap">Catagory</string>
     <string name="login">登录</string>
     <string name="loginbutton">登录</string>
     <string name="email">请输入电子邮箱</string>

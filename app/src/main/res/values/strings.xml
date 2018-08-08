@@ -7,13 +7,20 @@
     <string name="loginbutton">LOGIN</string>
     <string name="email">Enter Email</string>
     <string name="password">Enter password</string>
-    <string name="newenter">New member registration</string>
-    <string name="find">Find password</string>
+    <string name="newenter">New customer? Start here.</string>
+    <string name="find">Forgot your password?</string>
     <string name="Signup">SignUp</string>
     <string name="Signup_explain">The app for sign - up requires membership to be used normally. Please register by e-mail.</string>
     <string name="If_member_signin">If you are a member, please click here to sign in.</string>
     <string name="find_password">Find Password</string>
     <string name="find_password_explain">Enter registered E-mail.</string>
     <string name="find_password_send">Send E-mail</string>
-
+    <string name="sent_email">sent you an email.</string>
+    <string name="fail_sending_email">Email Failed!</string>
+    <string name="inprogress">Processing. Please wait..</string>
+    <string name="plz_enter_email">Enter email.</string>
+    <string name="plz_enter_Password">Enter password.</string>
+    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
+    <string name="fail_login">로그인 실패!</string>
+    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
 </resources>

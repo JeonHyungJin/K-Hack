@@ -15,5 +15,12 @@
     <string name="find_password">暗号探し</string>
     <string name="find_password_explain">登録したe-mailを入力してください。</string>
     <string name="find_password_send">E-mail 送信</string>
-
+    <string name="sent_email">メールを送りました。</string>
+    <string name="fail_sending_email">メール送ること失敗。</string>
+    <string name="inprogress">処理中です。 少々お待ちください。</string>
+    <string name="plz_enter_email">emailを入力してください。</string>
+    <string name="plz_enter_Password">暗証番号をご入力ください</string>
+    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
+    <string name="fail_login">로그인 실패!</string>
+    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
 </resources>

@@ -54,11 +54,11 @@ public class FindActivity extends AppCompatActivity implements View.OnClickListe
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(FindActivity.this, "이메일을 보냈습니다.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FindActivity.this, R.string.sent_email, Toast.LENGTH_LONG).show();
                                 finish();
                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                             } else {
-                                Toast.makeText(FindActivity.this, "메일 보내기 실패!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(FindActivity.this, R.string.fail_sending_email, Toast.LENGTH_LONG).show();
                             }
                             progressDialog.dismiss();
                         }

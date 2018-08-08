@@ -16,6 +16,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
+
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = "ProfileActivity";
     //firebase auth object
@@ -24,6 +28,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private TextView textViewUserEmail;
     private Button buttonLogout;
     private TextView textivewDelete;
+    private FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference mReference = mDatabase.getReference();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,13 +61,18 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             finish();
             startActivity(new Intent(this, LoginActivity.class));
         }
-        //회원탈퇴를 클릭하면 회원정보를 삭제한다. 삭제전에 컨펌창을 하나 띄워야 겠다.
+
         if(view == textivewDelete) {
+
+            String tokenID = FirebaseInstanceId.getInstance().getToken();
+            mReference = mDatabase.getReference("UserProfile/"+tokenID);
+
             AlertDialog.Builder alert_confirm = new AlertDialog.Builder(ProfileActivity.this);
             alert_confirm.setMessage("정말 계정을 삭제 할까요?").setCancelable(false).setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            mReference.removeValue();
                             user.delete()
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override

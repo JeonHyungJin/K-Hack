@@ -11,7 +11,7 @@
     <string name="find">Forgot your password?</string>
     <string name="Signup">Sign Up</string>
     <string name="Signup_explain">The app for sign - up requires membership to be used normally. Please register by e-mail.</string>
-    <string name="If_member_signin">If you are a member, please click here to sign in.</string>
+    <string name="If_member_signin">If you are a member, please <font fgcolor="#96A8F4">click here</font> to sign in.</string>
     <string name="find_password">Find Password</string>
     <string name="find_password_explain">Enter registered E-mail.</string>
     <string name="find_password_send">Send E-mail</string>

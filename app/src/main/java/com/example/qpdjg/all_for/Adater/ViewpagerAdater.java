@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewpagerAdater extends FragmentPagerAdapter {
     int MAX_PAGE;
+    Fragment cur_fragment=new Fragment();
     public ViewpagerAdater(FragmentManager fm,int max) {
         super(fm);
         MAX_PAGE =max;
@@ -15,7 +16,8 @@ public class ViewpagerAdater extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position < 0 || MAX_PAGE <= position)
             return null;
-        return null;
+
+        return cur_fragment;
     }
 
     @Override

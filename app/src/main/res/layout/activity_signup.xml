@@ -4,23 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/light_blue"
     android:orientation="vertical"
     tools:context=".Activity.MainActivity">
 
     <TextView
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/Signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:textSize="23dp"
+        android:text="회원가입"
         android:textColor="@color/colorAccent"
-        android:text="회원가입" />
+        android:textSize="23dp" />
 
     <TextView
-        android:layout_gravity="center_horizontal"
-        android:text="이 앱은 회원가입을 해야 정상적으로 사용할 수 있습니다.\n Email로 등록해 주세요."
+        android:id="@+id/Signup_explain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="이 앱은 회원가입을 해야 정상적으로 사용할 수 있습니다.\n Email로 등록해 주세요." />
 
     <EditText
         android:id="@+id/editTextEmail"

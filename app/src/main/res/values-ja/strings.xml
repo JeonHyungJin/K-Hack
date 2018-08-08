@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ALL_FOR</string>
+    <string name="app_name">ALL FOR</string>
     <string name="home">home</string>
     <string name="mypage">my page</string>
     <string name="catagory">catagory</string>
@@ -9,4 +9,11 @@
     <string name="password">暗証番号を入力してください</string>
     <string name="newenter">新規会員加入</string>
     <string name="find">パスワード忘れ</string>
+    <string name="Signup">会員加入</string>
+    <string name="Signup_explain">会員加入がアプリは、会員加入をすれば正常的に使用することができます。 Emailを登録してください。</string>
+    <string name="If_member_signin">会員んでしたら、このところを押してログインをしてください。</string>
+    <string name="find_password">暗号探し</string>
+    <string name="find_password_explain">登録したe-mailを入力してください。</string>
+    <string name="find_password_send">E-mail 送信</string>
+
 </resources>

@@ -50,6 +50,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             finish();
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
         }
+
+        TextView Signup_text = (TextView)findViewById(R.id.Signup);
+        TextView Signup_explain_text = (TextView)findViewById(R.id.Signup_explain);
+
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -61,6 +65,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         //button click event
         buttonSignup.setOnClickListener(this);
         textviewSingin.setOnClickListener(this);
+
+        //언어별로 변경되는 부분
+        Signup_text.setText(R.string.Signup);
+        Signup_explain_text.setText(R.string.Signup_explain);
+        buttonSignup.setText(R.string.Signup);
+        textviewSingin.setText(R.string.If_member_signin);
+
     }
     //Firebse creating a new user
     private void registerUser(){

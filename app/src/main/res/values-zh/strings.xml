@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ALL_FOR</string>
+    <string name="app_name">ALL FOR</string>
     <string name="home">home</string>
     <string name="mypage">my page</string>
     <string name="catagory">catagory</string>
@@ -9,4 +9,11 @@
     <string name="password">请输入密码。</string>
     <string name="newenter">新会员加入</string>
     <string name="find">找回密码</string>
+    <string name="Signup">注册会员</string>
+    <string name="Signup_explain">会员注册应用程序只有在注册会员时才能正常使用。 请登记为Email。</string>
+    <string name="If_member_signin">如果是会员,请点击这里登录。</string>
+    <string name="find_password">找回密码</string>
+    <string name="find_password_explain">请输入注册的 E-mail。</string>
+    <string name="find_password_send">电子邮件发送</string>
+
 </resources>

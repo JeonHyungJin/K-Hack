@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ALL_FOR</string>
+    <string name="app_name">ALL FOR</string>
     <string name="home">home</string>
     <string name="mypage">my page</string>
     <string name="catagory">catagory</string>
@@ -9,4 +9,11 @@
     <string name="password">Enter password</string>
     <string name="newenter">New member registration</string>
     <string name="find">Find password</string>
+    <string name="Signup">SignUp</string>
+    <string name="Signup_explain">The app for sign - up requires membership to be used normally. Please register by e-mail.</string>
+    <string name="If_member_signin">If you are a member, please click here to sign in.</string>
+    <string name="find_password">Find Password</string>
+    <string name="find_password_explain">Enter registered E-mail.</string>
+    <string name="find_password_send">Send E-mail</string>
+
 </resources>

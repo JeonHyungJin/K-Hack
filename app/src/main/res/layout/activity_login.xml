@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/light_blue"
+    android:background="@color/White"
     tools:context=".Activity.MainActivity">
 
     <TextView
@@ -14,28 +14,72 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textSize="23dp"
-        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textColor="@color/light_blue"
         android:text="로그인" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="center_horizontal"
-        android:hint="Enter email"
-        android:inputType="textEmailAddress" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="250dp"
-        android:layout_gravity="center_horizontal"
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Enter password"
-        android:inputType="textPassword" />
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="Enter email"
+            android:inputType="textEmailAddress" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/email" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:hint="Enter password"
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/password" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/buttonSignup"
@@ -43,7 +87,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_gravity="center_horizontal"
-        android:text="로그인" />
+        android:text="로그인"
+        android:textColor="@color/White"
+        android:background="@color/light_blue"/>
 
 
     <TextView
@@ -59,19 +105,24 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/textViewSignin"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Member Register" />
+            android:text="New customer? Start here."
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            />
 
         <TextView
             android:id="@+id/textViewFindpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="Don't remember password?"
-            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="2dp"
+            android:text="Forgot your password?"
+            android:textColor="@color/light_blue"
+            android:textAlignment="center"
             android:visibility="visible" />
 
     </LinearLayout>

@@ -7,7 +7,7 @@
     <string name="loginbutton">ログイン</string>
     <string name="email">メールを入力してください</string>
     <string name="password">暗証番号を入力してください</string>
-    <string name="newenter">新規会員加入</string>
+    <string name="newenter">新規のお客様: <font fgcolor="#96A8F4">ここから始まる</font></string>
     <string name="find">パスワード忘れ</string>
     <string name="Signup">会員加入</string>
     <string name="Signup_explain">会員加入がアプリは、会員加入をすれば正常的に使用することができます。 Emailを登録してください。</string>

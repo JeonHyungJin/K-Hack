@@ -15,5 +15,12 @@
     <string name="find_password">找回密码</string>
     <string name="find_password_explain">请输入注册的 E-mail。</string>
     <string name="find_password_send">电子邮件发送</string>
-
+    <string name="sent_email">我发了邮件。</string>
+    <string name="fail_sending_email">发送电子邮件失败!</string>
+    <string name="inprogress">处理中。 稍等一下。</string>
+    <string name="plz_enter_email">请输入email。</string>
+    <string name="plz_enter_Password">请输入密码。</string>
+    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
+    <string name="fail_login">로그인 실패!</string>
+    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
 </resources>

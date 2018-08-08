@@ -66,18 +66,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonSignin.setText(R.string.loginbutton);
         textviewSingin.setText(R.string.newenter);
         textviewFindPassword.setText(R.string.find);
-
     }
     //firebase userLogin method
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(this, "email을 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.plz_enter_email, Toast.LENGTH_SHORT).show();
             return;
         }
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(this, "password를 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.plz_enter_Password, Toast.LENGTH_SHORT).show();
             return;
         }
         progressDialog.setMessage("로그인중입니다. 잠시 기다려 주세요...");

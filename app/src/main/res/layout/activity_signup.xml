@@ -121,7 +121,7 @@
 
         <EditText
             android:id="@+id/editTextName"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
@@ -129,6 +129,14 @@
             android:layout_weight="1"
             android:hint="Enter Name"
             android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mypage_color" />
     </LinearLayout>
 
     <Button

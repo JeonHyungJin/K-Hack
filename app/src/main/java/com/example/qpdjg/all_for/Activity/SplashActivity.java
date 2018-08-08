@@ -18,12 +18,12 @@ public class SplashActivity  extends Activity {
         Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                Intent intent = new Intent(SplashActivity.this, StartPageActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 finish();
                 startActivity(intent);
             }
         };
-        handler.sendEmptyMessageDelayed(0, 1500);
+        handler.sendEmptyMessageDelayed(0, 2000);
     }
 
 }

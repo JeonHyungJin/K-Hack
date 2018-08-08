@@ -25,6 +25,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
 
     //define view objects
     EditText editTextEmail;
@@ -147,6 +149,21 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             startActivity(new Intent(this, LoginActivity.class)); //추가해 줄 로그인 액티비티
         }
 
+    }
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), R.string.double_press_end, Toast.LENGTH_SHORT).show();
+        }
     }
 }
 

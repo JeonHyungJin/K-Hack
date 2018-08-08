@@ -16,6 +16,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 public class FindActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
+
     private static final String TAG = "FindActivity";
     //define view objects
     private EditText editTextUserEmail;
@@ -66,4 +70,20 @@ public class FindActivity extends AppCompatActivity implements View.OnClickListe
                     });
         }
     }
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), R.string.double_press_end, Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

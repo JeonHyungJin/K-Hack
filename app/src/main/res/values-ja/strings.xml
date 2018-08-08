@@ -20,7 +20,13 @@
     <string name="inprogress">処理中です。 少々お待ちください。</string>
     <string name="plz_enter_email">emailを入力してください。</string>
     <string name="plz_enter_Password">暗証番号をご入力ください</string>
-    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
-    <string name="fail_login">로그인 실패!</string>
-    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
+    <string name="progess_in_login">ログイン中です。 少々お待ちください...</string>
+    <string name="fail_login">ログイン失敗!</string>
+    <string name="why_fail">暗証番号が間違ったり、インターネット連結されていません。</string>
+    <string name="process_wait">処理中です。 しばらく待ってください。</string>
+    <string name="enter_email">Emailを入力してください。</string>
+    <string name="enter_password">暗証番号をご入力ください。</string>
+    <string name="signup_error_type">すでに登録されたメールや暗証番号が6桁以上がありません。</string>
+    <string name="signup_error">会員加入エラー</string>
+
 </resources>

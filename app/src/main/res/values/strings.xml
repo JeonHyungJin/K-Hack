@@ -20,7 +20,12 @@
     <string name="inprogress">Processing. Please wait..</string>
     <string name="plz_enter_email">Enter email.</string>
     <string name="plz_enter_Password">Enter password.</string>
-    <string name="progess_in_login">로그인중입니다. 잠시 기다려주세요 ..</string>
-    <string name="fail_login">로그인 실패!</string>
-    <string name="why_fail">로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러</string>
+    <string name="progess_in_login">Login in progress. Just a moment, please...</string>
+    <string name="fail_login">Login Failed!</string>
+    <string name="why_fail">Incorrect password or no Internet connection.</string>
+    <string name="process_wait">Processing. Please wait...</string>
+    <string name="enter_email">Enter email.</string>
+    <string name="enter_password">Please enter your password.</string>
+    <string name="signup_error_type">Email already registered or password is not longer than 6 digits.</string>
+    <string name="signup_error">SignUp error</string>
 </resources>

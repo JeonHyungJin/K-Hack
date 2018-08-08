@@ -91,14 +91,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         //email과 password가 비었는지 아닌지를 체크 한다.
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(this, "Email을 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enter_email, Toast.LENGTH_SHORT).show();
             return;
         }
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(this, "Password를 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enter_password, Toast.LENGTH_SHORT).show();
         }
         //email과 password가 제대로 입력되어 있다면 계속 진행된다.
-        progressDialog.setMessage("등록중입니다. 기다려 주세요...");
+        progressDialog.setMessage(getResources().getString(R.string.process_wait));
         progressDialog.show();
         //creating a new user
         firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -110,8 +110,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         } else {
                             //에러발생시
-                            textviewMessage.setText("에러유형\n - 이미 등록된 이메일  \n -암호 최소 6자리 이상 \n - 서버에러");
-                            Toast.makeText(SignUpActivity.this, "등록 에러!", Toast.LENGTH_SHORT).show();
+                            textviewMessage.setText(R.string.signup_error_type);
+                            Toast.makeText(SignUpActivity.this, R.string.signup_error, Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();
                     }

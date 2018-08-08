@@ -45,7 +45,7 @@ public class FindActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view == buttonFind){
-            progressDialog.setMessage("처리중입니다. 잠시 기다려 주세요...");
+            progressDialog.setMessage(getResources().getString(R.string.process_wait));
             progressDialog.show();
             //비밀번호 재설정 이메일 보내기
             String emailAddress = editTextUserEmail.getText().toString().trim();

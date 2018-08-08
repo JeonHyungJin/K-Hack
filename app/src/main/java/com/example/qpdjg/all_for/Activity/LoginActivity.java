@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import org.w3c.dom.Text;
 
+import static com.example.qpdjg.all_for.R.string.progess_in_login;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     //define view objects
     EditText editTextEmail;
@@ -61,8 +63,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textviewFindPassword.setOnClickListener(this);
         //언어별 text 설정
         logintext.setText(R.string.login);
-        editTextEmail.setText(R.string.email);
-        editTextPassword.setText(R.string.password);
+        editTextEmail.setHint(R.string.email);
+        editTextPassword.setHint(R.string.password);
         buttonSignin.setText(R.string.loginbutton);
         textviewSingin.setText(R.string.newenter);
         textviewFindPassword.setText(R.string.find);
@@ -79,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, R.string.plz_enter_Password, Toast.LENGTH_SHORT).show();
             return;
         }
-        progressDialog.setMessage("로그인중입니다. 잠시 기다려 주세요...");
+        progressDialog.setMessage(getResources().getString(R.string.progess_in_login));
         progressDialog.show();
         //logging in the user
         firebaseAuth.signInWithEmailAndPassword(email, password)
@@ -91,8 +93,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             finish();
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         } else {
-                            Toast.makeText(getApplicationContext(), "로그인 실패!", Toast.LENGTH_LONG).show();
-                            textviewMessage.setText("로그인 실패 유형\n - password가 맞지 않습니다.\n -서버에러");
+                            Toast.makeText(getApplicationContext(), R.string.fail_login, Toast.LENGTH_LONG).show();
+                            textviewMessage.setText(R.string.why_fail);
                         }
                     }
                 });

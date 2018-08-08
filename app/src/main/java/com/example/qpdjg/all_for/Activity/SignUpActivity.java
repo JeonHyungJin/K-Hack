@@ -143,6 +143,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
         if(view == textviewSingin) {
             //TODO
+            finish();
             startActivity(new Intent(this, LoginActivity.class)); //추가해 줄 로그인 액티비티
         }
 

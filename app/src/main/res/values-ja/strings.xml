@@ -41,4 +41,8 @@
     <string name="delete_your_acc">アカウントが削除されました。</string>
     <string name="want_delete">本当にアカウントを削除しましょうか。</string>
     <string name="change_lang">として、言語が変更されました</string>
+    <string name="point">ポイント</string>
+    <string name="log_out">サインアウト</string>
+    <string name="Member_out">会員の退会</string>
+
 </resources>

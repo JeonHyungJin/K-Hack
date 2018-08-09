@@ -177,7 +177,7 @@ public class MypageFragment extends Fragment {
                     getResources().updateConfiguration(config,getResources().getDisplayMetrics());
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getActivity(), text+" "+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), text+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
                 }
             }
             @Override

@@ -42,7 +42,7 @@
     <string name="want_delete">정말 계정을 삭제 할까요?"</string>
     <string name="change_lang">로 언어가 변경되었습니다</string>
     <string name="point">포인트</string>
-    <string name="log_out">로그 아웃</string>
+    <string name="log_out">로그아웃</string>
     <string name="Member_out">회원탈퇴</string>
 
 </resources>

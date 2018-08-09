@@ -33,8 +33,11 @@
     <string name="signup_error">회원 가입 에러</string>
     <string name="password_notequal">비밀 번호가 일치하지 않습니다.</string>
     <string name="startapp">시작하려면 버튼을 누르십시오.</string>
-    <string name="double_press_end">뒤로 가기 버튼을 한 번 더 누르면 꺼집니다.
-</string>
-
-
+    <string name="double_press_end">뒤로 가기 버튼을 한 번 더 누르면 꺼집니다.</string>
+    <string name="okay"><font fgcolor="#96A8F4">확인</font></string>
+    <string name="cancel"><font fgcolor="#96A8F4">취소</font></string>
+    <string name="nice">반갑습니다</string>
+    <string name="as_login">으로 로그인 하였습니다</string>
+    <string name="delete_your_acc">계정이 삭제 되었습니다.</string>
+    <string name="want_delete">정말 계정을 삭제 할까요?"</string>
 </resources>

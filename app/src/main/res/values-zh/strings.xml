@@ -34,5 +34,10 @@
     <string name="password_notequal">密码不一致。</string>
     <string name="startapp">要开始的话请按下按钮。</string>
     <string name="double_press_end">再按下一次键就会熄灭。</string>
-
+    <string name="okay"><font fgcolor="#96A8F4">确认</font></string>
+    <string name="cancel"><font fgcolor="#96A8F4">取消</font></string>
+    <string name="nice">很高兴见到你。</string>
+    <string name="as_login">已登录</string>
+    <string name="delete_your_acc">账户被删除了。</string>
+    <string name="want_delete">真的要删除账户吗?</string>
 </resources>

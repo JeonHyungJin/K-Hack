@@ -34,4 +34,10 @@
     <string name="password_notequal">The secret number does not match.</string>
     <string name="startapp">Press button to start.</string>
     <string name="double_press_end">Press the Back button one more time to turn it off.</string>
+    <string name="okay"><font fgcolor="#96A8F4">Ok</font></string>
+    <string name="cancel"><font fgcolor="#96A8F4">Cancel</font></string>
+    <string name="nice">Welcome</string>
+    <string name="as_login">Logged in as</string>
+    <string name="delete_your_acc">Your account has been deleted.</string>
+    <string name="want_delete">Do you really want to delete the account?</string>
 </resources>

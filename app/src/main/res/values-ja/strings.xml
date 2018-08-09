@@ -34,6 +34,10 @@
     <string name="password_notequal">暗証番号が一致しません。</string>
     <string name="startapp">開始するには、ボタンをクリックします。</string>
     <string name="double_press_end">後ろに戻るボタンをもう一度押せば消えます。</string>
-
-
+    <string name="okay"><font fgcolor="#96A8F4">確認</font></string>
+    <string name="cancel"><font fgcolor="#96A8F4">キャンセル</font></string>
+    <string name="nice">嬉しいです</string>
+    <string name="as_login">でログインしました</string>
+    <string name="delete_your_acc">アカウントが削除されました。</string>
+    <string name="want_delete">本当にアカウントを削除しましょうか。</string>
 </resources>

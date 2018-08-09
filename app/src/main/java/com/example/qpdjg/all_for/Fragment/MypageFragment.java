@@ -61,7 +61,7 @@ public class MypageFragment extends Fragment {
         //유저가 있다면, null이 아니면 계속 진행
         FirebaseUser user = firebaseAuth.getCurrentUser();
         //textViewUserEmail의 내용을 변경해 준다.
-        textViewUserEmail.setText("반갑습니다.\n"+ user.getEmail()+"으로 로그인 하였습니다.");
+        textViewUserEmail.setText(R.string.nice+"\n"+ user.getEmail()+R.string.as_login);
         //logout button event
 
         buttonLogout.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class MypageFragment extends Fragment {
                 mReference = database.getReference("UserProfile/"+tokenID);
 
                 AlertDialog.Builder alert_confirm = new AlertDialog.Builder(getActivity());
-                alert_confirm.setMessage("정말 계정을 삭제 할까요?").setCancelable(false).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                alert_confirm.setMessage(R.string.want_delete).setCancelable(false).setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -89,17 +89,17 @@ public class MypageFragment extends Fragment {
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
-                                                Toast.makeText(getActivity(), "계정이 삭제 되었습니다.", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(getActivity(), R.string.delete_your_acc, Toast.LENGTH_LONG).show();
                                                 startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
                                             }
                                         });
                             }
                         }
                 );
-                alert_confirm.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                alert_confirm.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getActivity(), "취소", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), R.string.cancel, Toast.LENGTH_LONG).show();
                     }
                 });
                 alert_confirm.show();

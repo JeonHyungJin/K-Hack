@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.qpdjg.all_for.R;
 import com.example.qpdjg.all_for.Util.Profile_data;
+import com.example.qpdjg.all_for.Util.TitlebarActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,7 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
+public class SignUpActivity extends TitlebarActivity implements View.OnClickListener{
 
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;

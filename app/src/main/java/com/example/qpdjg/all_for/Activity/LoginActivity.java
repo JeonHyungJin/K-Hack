@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.TitlebarActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +23,7 @@ import org.w3c.dom.Text;
 
 import static com.example.qpdjg.all_for.R.string.progess_in_login;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends TitlebarActivity implements View.OnClickListener {
 
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;

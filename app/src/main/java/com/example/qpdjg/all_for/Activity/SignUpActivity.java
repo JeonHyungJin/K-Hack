@@ -95,7 +95,7 @@ public class SignUpActivity extends TitlebarActivity implements View.OnClickList
             Profile_data profile_data = new Profile_data();
             profile_data.firebaseKey = tokenID;
             profile_data.UserName = editTextName.getText().toString().trim();
-            profile_data.Point = 0;
+            profile_data.Point = "0";
             mReference.child(tokenID).setValue(profile_data);
         }
 

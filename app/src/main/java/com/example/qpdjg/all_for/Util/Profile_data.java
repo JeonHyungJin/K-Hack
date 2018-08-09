@@ -4,5 +4,5 @@ public class Profile_data {
 
     public String firebaseKey;
     public String UserName;
-    public int Point;
+    public String Point;
 }

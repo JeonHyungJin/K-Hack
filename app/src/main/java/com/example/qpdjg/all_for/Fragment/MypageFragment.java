@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.qpdjg.all_for.Activity.LoginActivity;
 import com.example.qpdjg.all_for.Activity.ProfileActivity;
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.Profile_data;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +29,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MypageFragment extends Fragment {
 
@@ -110,11 +114,24 @@ public class MypageFragment extends Fragment {
         TextView Email_Text = (TextView)linearLayout.findViewById(R.id.email_text);
         final TextView Point_Text = (TextView)linearLayout.findViewById(R.id.point_text);
 
-        String tokenID = FirebaseInstanceId.getInstance().getToken();
+        final String tokenID = FirebaseInstanceId.getInstance().getToken();
 
-        database.getReference().child("UserProfile").addValueEventListener(new ValueEventListener() {
+        DatabaseReference ProfileRef = mReference.child("UserProfile");
+
+        ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot ds : dataSnapshot.getChildren()){
+                    String FB_Point = ds.child("Point").getValue(String.class);
+                    String FB_firebaseKey = ds.child("firebaseKey").getValue(String.class);
+                    String FB_Name = ds.child("UserName").getValue(String.class);
+
+                    if(tokenID.equals(FB_firebaseKey)){
+                        Point_Text.setText(FB_Point+"Point");
+                        break;
+                    }
+                }
 
             }
 
@@ -122,10 +139,15 @@ public class MypageFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        };
+        ProfileRef.addListenerForSingleValueEvent(valueEventListener);
 
+        /*for(int i = 0;i<Profile_list.size();i++){
+            if(tokenID.equals(Profile_list.get(i).firebaseKey)){
+                System.out.println("내포인트"+Profile_list.get(i).Point);
+            }
+        }*/
         Email_Text.setText(user.getEmail());
-
 
         return linearLayout;
     }

@@ -41,4 +41,8 @@
     <string name="delete_your_acc">账户被删除了。</string>
     <string name="want_delete">真的要删除账户吗?</string>
     <string name="change_lang">语言变了</string>
+    <string name="point">点</string>
+    <string name="log_out">签了</string>
+    <string name="Member_out">注销会员</string>
+
 </resources>

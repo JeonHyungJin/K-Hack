@@ -12,10 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.TitlebarActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-public class FindActivity extends AppCompatActivity implements View.OnClickListener{
+public class FindActivity extends TitlebarActivity implements View.OnClickListener{
 
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;

@@ -40,4 +40,5 @@
     <string name="as_login">でログインしました</string>
     <string name="delete_your_acc">アカウントが削除されました。</string>
     <string name="want_delete">本当にアカウントを削除しましょうか。</string>
+    <string name="change_lang">として、言語が変更されました</string>
 </resources>

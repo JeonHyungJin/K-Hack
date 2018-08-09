@@ -40,4 +40,5 @@
     <string name="as_login">已登录</string>
     <string name="delete_your_acc">账户被删除了。</string>
     <string name="want_delete">真的要删除账户吗?</string>
+    <string name="change_lang">语言变了</string>
 </resources>

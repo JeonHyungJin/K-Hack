@@ -40,4 +40,5 @@
     <string name="as_login">Logged in as</string>
     <string name="delete_your_acc">Your account has been deleted.</string>
     <string name="want_delete">Do you really want to delete the account?</string>
+    <string name="change_lang">Language changed</string>
 </resources>

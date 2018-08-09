@@ -71,6 +71,7 @@ public class LoginActivity extends TitlebarActivity implements View.OnClickListe
         editTextEmail.setHint(R.string.email);
         editTextPassword.setHint(R.string.password);
         buttonSignin.setText(R.string.loginbutton);
+        buttonSignin.setText(R.string.loginbutton);
         textviewSingin.setText(R.string.newenter);
         textviewFindPassword.setText(R.string.find);
     }

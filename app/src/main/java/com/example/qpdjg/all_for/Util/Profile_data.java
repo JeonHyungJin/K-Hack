@@ -1,6 +1,6 @@
 package com.example.qpdjg.all_for.Util;
 
-public class sendData {
+public class Profile_data {
 
     public String firebaseKey;
     public String UserName;

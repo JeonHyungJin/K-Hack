@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qpdjg.all_for.R;
-import com.example.qpdjg.all_for.Util.sendData;
+import com.example.qpdjg.all_for.Util.Profile_data;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -91,11 +91,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         //        mReference.child("message").push().setValue("2");
         mReference = mDatabase.getReference("UserProfile");
         if(!TextUtils.isEmpty(tokenID)) {
-            sendData SendData = new sendData();
-            SendData.firebaseKey = tokenID;
-            SendData.UserName = editTextName.getText().toString().trim();
-            SendData.Point = 0;
-            mReference.child(tokenID).setValue(SendData);
+            Profile_data profile_data = new Profile_data();
+            profile_data.firebaseKey = tokenID;
+            profile_data.UserName = editTextName.getText().toString().trim();
+            profile_data.Point = 0;
+            mReference.child(tokenID).setValue(profile_data);
         }
 
         //email과 password가 비었는지 아닌지를 체크 한다.
@@ -126,7 +126,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             //에러발생시
                             textviewMessage.setText(R.string.signup_error_type);

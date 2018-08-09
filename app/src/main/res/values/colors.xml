@@ -6,5 +6,5 @@
     <color name="light_blue">#96A8F4</color>
     <color name="dark">#6F6F6F</color>
     <color name="White">#FFFFFF</color>
-
+    <color name="too_light_blue">#f5f7fe</color>
 </resources>

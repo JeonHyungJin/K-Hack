@@ -2,6 +2,7 @@ package com.example.qpdjg.all_for.Fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -10,12 +11,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import java.util.*;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.Spinner;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.content.Context;
 import com.example.qpdjg.all_for.Activity.LoginActivity;
+import com.example.qpdjg.all_for.Activity.MainActivity;
 import com.example.qpdjg.all_for.Activity.ProfileActivity;
 import com.example.qpdjg.all_for.R;
 import com.example.qpdjg.all_for.Util.Profile_data;
@@ -41,18 +48,22 @@ public class MypageFragment extends Fragment {
     private TextView textivewDelete;
     private FirebaseDatabase database =  FirebaseDatabase.getInstance();
     private DatabaseReference mReference = database.getReference();
-
+    Spinner spinner;
+    String[] item;
+    Locale lang;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         LinearLayout linearLayout=(LinearLayout)inflater.inflate(R.layout.fragment_mypage,container,false);
         //initializing views
         textViewUserEmail = linearLayout.findViewById(R.id.email_text);
         buttonLogout = (Button) linearLayout.findViewById(R.id.buttonLogout);
         textivewDelete = (TextView) linearLayout.findViewById(R.id.textviewDelete);
+
         //initializing firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
         //유저가 로그인 하지 않은 상태라면 null 상태이고 이 액티비티를 종료하고 로그인 액티비티를 연다.
@@ -148,6 +159,46 @@ public class MypageFragment extends Fragment {
             }
         }*/
         Email_Text.setText(user.getEmail());
+
+        //spinner 언어 선택
+
+        spinner = (Spinner)linearLayout.findViewById(R.id.spinner);
+
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                String text = spinner.getSelectedItem().toString();
+                if(text!="Language") {
+                    if(text=="한국어"){
+                        lang = Locale.KOREA;
+                    }else if(text=="English"){
+                        lang = Locale.US;
+                    }else if(text=="中国語"){
+                        lang = Locale.CHINA;
+                    }else if(text=="日本語"){
+                        lang = Locale.JAPAN;
+                    }
+                    Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
+                    Configuration config = new Configuration();
+                    config.locale = lang;
+                    getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) { }
+        });
+
+        ArrayList<String> items = new ArrayList<String>();
+        items.add("Language"); items.add("English");
+        items.add("한국어"); items.add("日本語");
+        items.add("中国語");
+
+        ArrayAdapter<String> spiAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
+        spinner.setAdapter(spiAdapter);
+
 
         return linearLayout;
     }

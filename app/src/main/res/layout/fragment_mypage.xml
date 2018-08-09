@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:scrollbars="none">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -71,7 +70,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="172dp"
+        android:layout_height="147dp"
         android:background="@color/White"
         android:orientation="vertical">
 
@@ -83,7 +82,7 @@
             <Button
                 android:id="@+id/buttonLogout"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/White"
                 android:text="log out" />
@@ -116,12 +115,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="8dp"
-        android:background="#E9EDF0"
-        ></LinearLayout>
+        android:background="#E9EDF0"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/White"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="25dp"
+        android:background="@color/too_light_blue">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/too_light_blue"
+            app:srcCompat="@drawable/my_page_setthing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/too_light_blue"
+            android:orientation="vertical"
+            android:text="setting"></TextView>
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#E9EDF0"></LinearLayout>
 </LinearLayout>
+

@@ -4,8 +4,9 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:gravity="center">
+
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="32dp"
+        android:layout_width="75dp"
+        android:layout_height="23.7dp"
         android:background="@drawable/allfor" />
 </LinearLayout>

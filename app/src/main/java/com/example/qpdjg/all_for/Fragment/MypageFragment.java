@@ -145,10 +145,8 @@ public class MypageFragment extends Fragment {
                 }
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         };
         ProfileRef.addListenerForSingleValueEvent(valueEventListener);
@@ -161,12 +159,11 @@ public class MypageFragment extends Fragment {
         Email_Text.setText(user.getEmail());
 
         //spinner 언어 선택
-
         spinner = (Spinner)linearLayout.findViewById(R.id.spinner);
-
         spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+              //  String show = getResources().getString(R.string.change_lang);
                 String text = spinner.getSelectedItem().toString();
                 if(text!="Language") {
                     if(text=="한국어"){
@@ -178,15 +175,14 @@ public class MypageFragment extends Fragment {
                     }else if(text=="日本語"){
                         lang = Locale.JAPAN;
                     }
-                    Toast.makeText(getActivity(), text, Toast.LENGTH_SHORT).show();
                     Configuration config = new Configuration();
                     config.locale = lang;
                     getResources().updateConfiguration(config,getResources().getDisplayMetrics());
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);
+                    Toast.makeText(getActivity(), text+" "+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> arg0) { }
         });
@@ -195,10 +191,8 @@ public class MypageFragment extends Fragment {
         items.add("Language"); items.add("English");
         items.add("한국어"); items.add("日本語");
         items.add("中国語");
-
         ArrayAdapter<String> spiAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
         spinner.setAdapter(spiAdapter);
-
 
         return linearLayout;
     }

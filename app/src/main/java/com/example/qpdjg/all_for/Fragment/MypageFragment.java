@@ -79,6 +79,9 @@ public class MypageFragment extends Fragment {
         textViewUserEmail.setText(R.string.nice+"\n"+ user.getEmail()+R.string.as_login);
         //logout button event
 
+        buttonLogout.setText(R.string.log_out);
+        textivewDelete.setText(R.string.Member_out);
+
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,12 +153,6 @@ public class MypageFragment extends Fragment {
             }
         };
         ProfileRef.addListenerForSingleValueEvent(valueEventListener);
-
-        /*for(int i = 0;i<Profile_list.size();i++){
-            if(tokenID.equals(Profile_list.get(i).firebaseKey)){
-                System.out.println("내포인트"+Profile_list.get(i).Point);
-            }
-        }*/
         Email_Text.setText(user.getEmail());
 
         //spinner 언어 선택
@@ -180,7 +177,7 @@ public class MypageFragment extends Fragment {
                     getResources().updateConfiguration(config,getResources().getDisplayMetrics());
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);
-                    Toast.makeText(getActivity(), text+" "+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), text+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
                 }
             }
             @Override

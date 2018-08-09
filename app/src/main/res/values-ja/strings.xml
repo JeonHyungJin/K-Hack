@@ -2,8 +2,8 @@
     <string name="app_name">ALL FOR</string>
     <string name="home">home</string>
     <string name="mypage">my page</string>
-    <string name="catagory">catagory</string>
-    <string name="catagoryCap">Catagory</string>
+    <string name="category">category</string>
+    <string name="categoryCap">Category</string>
     <string name="login">ログイン</string>
     <string name="loginbutton">ログイン</string>
     <string name="email">メールを入力してください</string>

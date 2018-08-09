@@ -24,6 +24,8 @@ public class BottomTab  extends LinearLayout {
     TextView catagoryTxt;
     TextView mypageTxt;
 
+    CustomViewPager viewPager;
+
     public BottomTab(Context context) {
         super(context);
         initView();
@@ -56,6 +58,12 @@ public class BottomTab  extends LinearLayout {
         catagoryTxt = (TextView)findViewById(R.id.menu_catagoryTxt);
         mypageTxt = (TextView)findViewById(R.id.menu_mypageTxt);
 
+
+        activeHome();
+        offCatagory();
+        offMypage();
+
+
         home.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +71,8 @@ public class BottomTab  extends LinearLayout {
                 offCatagory();
                 offMypage();
                 homePressed();
+                viewPager.setCurrentItem(0);
+                viewPager.getAdapter().notifyDataSetChanged();
             }
         });
 
@@ -73,6 +83,9 @@ public class BottomTab  extends LinearLayout {
                 activeCatagory();
                 offMypage();
                 catgoryPressed();
+                viewPager.setCurrentItem(1);
+                viewPager.getAdapter().notifyDataSetChanged();
+
             }
         });
 
@@ -83,6 +96,9 @@ public class BottomTab  extends LinearLayout {
                 offCatagory();
                 activeMypage();
                 mypagePressed();
+                viewPager.setCurrentItem(2);
+                viewPager.getAdapter().notifyDataSetChanged();
+
             }
         });
     }
@@ -114,8 +130,13 @@ public class BottomTab  extends LinearLayout {
         mypageTxt.setTextColor(ContextCompat.getColor(getContext(),R.color.dark));
     }
 
+
     public void homePressed(){}
     public void catgoryPressed(){}
     public void mypagePressed(){}
 
+
+    public void setViewpager(CustomViewPager viewpager) {
+        this.viewPager = viewpager;
+    }
 }

@@ -44,5 +44,5 @@
     <string name="point">ポイント</string>
     <string name="log_out">サインアウト</string>
     <string name="Member_out">会員の退会</string>
-
+    <string name="checking_point">照会中。</string>
 </resources>

@@ -9,18 +9,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
-import com.example.qpdjg.all_for.Item.CatagoryItem;
+import com.example.qpdjg.all_for.Item.CategoryItem;
 import com.example.qpdjg.all_for.R;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends BaseAdapter {
     private LayoutInflater inflater;
-    private ArrayList<CatagoryItem> data;
+    private ArrayList<CategoryItem> data;
     private int layout;
     private Context context;
     private CustomViewPager viewPager;
-    public CategoryAdapter(Context context, int layout, ArrayList<CatagoryItem> data, CustomViewPager viewPager){
+    public CategoryAdapter(Context context, int layout, ArrayList<CategoryItem> data, CustomViewPager viewPager){
         this.context = context;
         this.inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.data=data;
@@ -33,7 +33,7 @@ public class CategoryAdapter extends BaseAdapter {
     }
 
     @Override
-    public CatagoryItem getItem(int i) {
+    public CategoryItem getItem(int i) {
         return data.get(i);
     }
 

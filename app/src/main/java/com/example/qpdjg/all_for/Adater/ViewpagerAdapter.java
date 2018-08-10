@@ -11,6 +11,7 @@ import com.example.qpdjg.all_for.Fragment.CategoryDetailFragment;
 import com.example.qpdjg.all_for.Fragment.CategoryFragment;
 import com.example.qpdjg.all_for.Fragment.MainFragment;
 import com.example.qpdjg.all_for.Fragment.MypageFragment;
+import com.example.qpdjg.all_for.Fragment.ViewAppFragment;
 
 public class ViewpagerAdapter extends FragmentPagerAdapter {
     int MAX_PAGE;
@@ -19,6 +20,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     CategoryFragment categoryFragment = new CategoryFragment();
     MypageFragment mypageFragment = new MypageFragment();
     CategoryDetailFragment categoryDetailFragment = new CategoryDetailFragment();
+    ViewAppFragment viewAppFragment = new ViewAppFragment();
     ViewPager viewPager;
 
     private boolean swipeEnabled;
@@ -28,6 +30,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
         MAX_PAGE =max;
         this.viewPager = viewPager;
         categoryFragment.setViewPager(viewPager);
+        categoryDetailFragment.setViewPager(viewPager);
     }
 
     @Override
@@ -46,6 +49,11 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
                 break;
             case 3:
                 cur_fragment=categoryDetailFragment;
+                break;
+            case 4:
+                cur_fragment=viewAppFragment;
+                break;
+
         }
         return cur_fragment;
     }
@@ -59,6 +67,8 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     public void setToCall(String toCall){
         categoryDetailFragment.setToCall(toCall);
     }
+    public void  setAppCall(String appCall){viewAppFragment.setAppCall(appCall);}
 
 }
+
 

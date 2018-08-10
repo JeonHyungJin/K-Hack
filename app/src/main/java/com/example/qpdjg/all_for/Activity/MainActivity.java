@@ -12,17 +12,12 @@ import com.example.qpdjg.all_for.Util.GetViewPagerPage;
 import com.example.qpdjg.all_for.Util.TitlebarActivity;
 
 public class MainActivity extends TitlebarActivity {
-<<<<<<< HEAD
+
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
 
     int MAX_PAGE=5;
-=======
 
-    private final long FINISH_INTERVAL_TIME = 2000;
-    private long backPressedTime = 0;
-    int MAX_PAGE=3;
->>>>>>> 191485f8315d7ae70c45d39fc24d54f144ca3e63
     Fragment cur_fragment=new Fragment();
     ViewpagerAdapter viewpagerAdapter;
     GetViewPagerPage getViewPagerPage;
@@ -52,7 +47,7 @@ public class MainActivity extends TitlebarActivity {
     public void onBackPressed() {
         long tempTime = System.currentTimeMillis();
         long intervalTime = tempTime - backPressedTime;
-<<<<<<< HEAD
+
         if(getViewPagerPage.getCurrentPage() == 3) {
             bottomTab.setCatagory();
         }
@@ -75,18 +70,4 @@ public class MainActivity extends TitlebarActivity {
             }
         }
     }
-
-=======
-
-        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
-        {
-            super.onBackPressed();
-        }
-        else
-        {
-            backPressedTime = tempTime;
-            Toast.makeText(getApplicationContext(), R.string.double_press_end, Toast.LENGTH_SHORT).show();
-        }
-    }
->>>>>>> 191485f8315d7ae70c45d39fc24d54f144ca3e63
 }

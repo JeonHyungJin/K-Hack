@@ -67,24 +67,14 @@ public class BottomTab  extends LinearLayout {
         home.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                activeHome();
-                offCatagory();
-                offMypage();
-                homePressed();
-                viewPager.setCurrentItem(0);
-                viewPager.getAdapter().notifyDataSetChanged();
+                setHome();
             }
         });
 
         catagory.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                offHome();
-                activeCatagory();
-                offMypage();
-                catgoryPressed();
-                viewPager.setCurrentItem(1);
-                viewPager.getAdapter().notifyDataSetChanged();
+                setCatagory();
 
             }
         });
@@ -92,12 +82,7 @@ public class BottomTab  extends LinearLayout {
         mypage.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                offHome();
-                offCatagory();
-                activeMypage();
-                mypagePressed();
-                viewPager.setCurrentItem(2);
-                viewPager.getAdapter().notifyDataSetChanged();
+                setMypage();
 
             }
         });
@@ -135,6 +120,27 @@ public class BottomTab  extends LinearLayout {
     public void catgoryPressed(){}
     public void mypagePressed(){}
 
+    public void setHome(){
+        activeHome();
+        offCatagory();
+        offMypage();
+        viewPager.setCurrentItem(0);
+        viewPager.getAdapter().notifyDataSetChanged();
+    }
+    public void setCatagory(){
+        offHome();
+        activeCatagory();
+        offMypage();
+        viewPager.setCurrentItem(1);
+        viewPager.getAdapter().notifyDataSetChanged();
+    }
+    public void setMypage(){
+        offHome();
+        offCatagory();
+        activeMypage();
+        viewPager.setCurrentItem(2);
+        viewPager.getAdapter().notifyDataSetChanged();
+    }
 
     public void setViewpager(CustomViewPager viewpager) {
         this.viewPager = viewpager;

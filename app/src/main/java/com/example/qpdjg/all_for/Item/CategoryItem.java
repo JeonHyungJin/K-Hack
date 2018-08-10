@@ -3,12 +3,12 @@ package com.example.qpdjg.all_for.Item;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 
-public class CatagoryItem {
+public class CategoryItem {
     Drawable icon;
     String txt;
     String toCall;
 
-    public CatagoryItem(Drawable icon, String txt, String toCall) {
+    public CategoryItem(Drawable icon, String txt, String toCall) {
         this.icon = icon;
         this.txt = txt;
         this.toCall = toCall;

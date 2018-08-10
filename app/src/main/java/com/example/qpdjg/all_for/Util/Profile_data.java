@@ -5,4 +5,5 @@ public class Profile_data {
     public String UserName;
     public String Point;
     public String E_mail;
+    //Git check
 }

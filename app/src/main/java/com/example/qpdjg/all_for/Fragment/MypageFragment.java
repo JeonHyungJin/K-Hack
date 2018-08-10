@@ -87,6 +87,7 @@ public class MypageFragment extends Fragment {
             public void onClick(View view) {
                     firebaseAuth.signOut();
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    getActivity().finish();
                     startActivity(intent);
 
             }
@@ -108,6 +109,7 @@ public class MypageFragment extends Fragment {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 Toast.makeText(getActivity(), R.string.delete_your_acc, Toast.LENGTH_LONG).show();
+                                                getActivity().finish();
                                                 startActivity(new Intent(getActivity().getApplicationContext(), LoginActivity.class));
                                             }
                                         });
@@ -177,6 +179,7 @@ public class MypageFragment extends Fragment {
                     getResources().updateConfiguration(config,getResources().getDisplayMetrics());
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);
+                    getActivity().finish();
                     Toast.makeText(getActivity(), text+getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
                 }
             }

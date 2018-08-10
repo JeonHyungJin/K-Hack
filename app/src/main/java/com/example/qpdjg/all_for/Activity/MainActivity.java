@@ -2,6 +2,7 @@ package com.example.qpdjg.all_for.Activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.widget.Toast;
 
 import com.example.qpdjg.all_for.Adater.ViewpagerAdapter;
 import com.example.qpdjg.all_for.Custom.BottomTab;
@@ -10,6 +11,9 @@ import com.example.qpdjg.all_for.R;
 import com.example.qpdjg.all_for.Util.TitlebarActivity;
 
 public class MainActivity extends TitlebarActivity {
+
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
     int MAX_PAGE=3;
     Fragment cur_fragment=new Fragment();
     ViewpagerAdapter viewpagerAdapter;
@@ -30,5 +34,20 @@ public class MainActivity extends TitlebarActivity {
         bottomTab.setViewpager(viewPager);
 
 
+    }
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), R.string.double_press_end, Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -85,7 +85,7 @@ public class CategoryDetailFragment extends Fragment {
             }else if(strLanguage == "en") {
                 detail_explain.setText("You can compare the price and features of the room you want to save without having to make a real estate as an app that will help you to find rooms to live for a long time or for a certain period of time");
             }else if (strLanguage == "ja"){
-                detail_explain.setText("장기간 생활이나 일정기간동안 생활하려는 방들을 알아보는데 도움을 주는 앱으로써 부동산을 가지 않아도 구하고자 하는 방의 가격, 특징을 미리 비교 할 수 있다.");
+                detail_explain.setText("長期間生活や一定期間に生活しようとする部屋を調べるのに役をするアプリで、不動産を行かなくても求めようとする部屋の価格、特徴を事前に比較しことができる。");
             }else if (strLanguage == "zh"){
                 detail_explain.setText("这应用程序是一种帮助您决定仅存在于韩国的住处. 您可以预先比要借房子的价格和特点。");
             }
@@ -95,7 +95,7 @@ public class CategoryDetailFragment extends Fragment {
             }else if(strLanguage == "en") {
                 detail_explain.setText("As an app that introduces and shows famous tourist attractions in Korea, users can check out sightseeing places in a specific area, as well as reviews and main food items of people who have already visited.");
             }else if (strLanguage == "ja"){
-                detail_explain.setText("한국에 있는 유명 관광지들을 소개 및 안내 해주는 앱으로써 사용자가 특정 지역의 관광지를 알아보려하면 관광코스를 추천해 줄 뿐 만 아니라 이미 다녀갔던 사람들의 리뷰, 주요 먹거리 등을 확인 할 수 있다.");
+                detail_explain.setText("韓国にある有名観光地を紹介や案内してくれるアプリとして使用者が特定地域の観光地を調べるとすれば観光コースをお勧めしてくれるだけでなく、すでに訪れた人たちのレビュー、主要の食べ物などを確認することができる。");
             }else if (strLanguage == "zh"){
                 detail_explain.setText("这应用程序介绍和展示韩国著名旅游景点，用户可以查看特定区域的观光景点和已经访问过的人的评论和吃过的食品");
             }

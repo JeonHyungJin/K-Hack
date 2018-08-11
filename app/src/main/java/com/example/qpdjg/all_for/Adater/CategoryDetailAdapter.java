@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryDetailItem;
-import com.example.qpdjg.all_for.Item.CategoryItem;
 import com.example.qpdjg.all_for.R;
 
 import java.util.ArrayList;

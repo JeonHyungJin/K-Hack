@@ -45,4 +45,13 @@
     <string name="log_out">サインアウト</string>
     <string name="Member_out">会員の退会</string>
     <string name="checking_point">照会中。</string>
+    <string name="introduceTrans">韓国の大衆交通を利用するのに役をするアプリである。</string>
+    <string name="introduceRest">使用者においしくて有名なレストランを推薦したり、使用者が望むメニューまたは該当地域の有名したり、おいしい飲食店を薦めてくれる。 また、行こうとする食堂を訪問した人々の評価も確認することができる。</string>
+    <string name="introduceDeli">韓国の独特な文化として電話やアプリを使用し、料理を注文すると、食べ物を望む場所にもたらす。 また、遅い夜まで配達が可能で、アプリ自体内で割引を受けることができる。</string>
+    <string name="introducePro">長期間生活や一定期間に生活しようとする部屋を調べるのに役をするアプリで、不動産を行かなくても求めようとする部屋の価格、特徴を事前に比較しことができる。</string>
+    <string name="introduceTravel">韓国にある有名観光地を紹介や案内してくれるアプリとして使用者が特定地域の観光地を調べるとすれば観光コースをお勧めしてくれるだけでなく、すでに訪れた人たちのレビュー、主要の食べ物などを確認することができる。</string>
 </resources>
+
+
+
+

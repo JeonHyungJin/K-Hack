@@ -45,4 +45,9 @@
     <string name="log_out">Sign out</string>
     <string name="Member_out">Membership Withdrawal</string>
     <string name="checking_point">Checking...</string>
+    <string name="introduceTrans">It helps you to use public transportation in Korea.</string>
+    <string name="introduceRest">Recommend a delicious and famous restaurant to the user, or recommend the menu or the famous and delicious restaurant in your area. You can also check the ratings of the people who visited the restaurant you want to go to.</string>
+    <string name="introduceDeli">As a unique Korean culture, when you order food using a phone or app, bring the food to the place where you want. You can also deliver it late into the night and get a discount within the app itself.</string>
+    <string name="introducePro">You can compare the price and features of the room you want to save without having to make a real estate as an app that will help you to find rooms to live for a long time or for a certain period of time</string>
+    <string name="introduceTravel">As an app that introduces and shows famous tourist attractions in Korea, users can check out sightseeing places in a specific area, as well as reviews and main food items of people who have already visited.</string>
 </resources>

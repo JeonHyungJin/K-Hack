@@ -45,5 +45,13 @@
     <string name="log_out">签了</string>
     <string name="Member_out">注销会员</string>
     <string name="checking_point">查询中。</string>
-
+    <string name="introduceTrans"> 这个应用程序可以帮助您在韩国使用公共交通。</string>
+    <string name="introduceRest">为了用户推荐美味而著名的餐厅，以及推荐有用户想要的饮食的餐厅或者您所在地区的著名美味的餐厅。您还可以查看访问过您要去的餐厅的人的评分。</string>
+    <string name="introduceDeli"> 送餐是一种独特的韩国文化，用电话或应用程序订购食物，那把食物带到您想要的地方，并且您也可以将它送到甚至在深夜。还有在应用程序上可以获得折扣。</string>
+    <string name="introducePro"> 这应用程序是一种帮助您决定仅存在于韩国的住处. 您可以预先比要借房子的价格和特点。</string>
+    <string name="introduceTravel"> 这应用程序介绍和展示韩国著名旅游景点，用户可以查看特定区域的观光景点和已经访问过的人的评论和吃过的食品</string>
 </resources>
+
+
+
+

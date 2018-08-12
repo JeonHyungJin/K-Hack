@@ -16,6 +16,7 @@ import com.example.qpdjg.all_for.Adater.CategoryDetailAdapter;
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryDetailItem;
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.Comment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -91,11 +92,23 @@ public class CategoryDetailFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 return_data.clear();
+                ArrayList<Comment> commentArrayList = new ArrayList<Comment>();
+                commentArrayList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    System.out.println(ds.getKey().toString().trim());
-                    System.out.println(ds.child("app_img").getValue().toString().trim());
-
-                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, 2, ds.child("app_img").getValue().toString().trim()));
+                    int aver_rank = 0;
+                    int comments_size = 0;
+                    //System.out.println(ds.getKey().toString().trim());
+                    //System.out.println(ds.child("app_img").getValue().toString().trim());
+                    for(DataSnapshot ds2 : ds.child("comments").getChildren()){
+                        aver_rank += Integer.parseInt(ds2.child("rank").getValue().toString().trim());
+                        comments_size++;
+                    }
+                    if(comments_size != 0 ) {
+                        aver_rank = aver_rank / comments_size;
+                    }else{
+                        aver_rank = 0;
+                    }
+                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, aver_rank, ds.child("app_img").getValue().toString().trim()));
                 }
 
             }

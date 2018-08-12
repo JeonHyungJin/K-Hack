@@ -46,6 +46,11 @@ public class CategoryDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        data1 = DB_read("transport");
+        data2 = DB_read("restaurant");
+        data3 = DB_read("delivery");
+        data4 = DB_read("tour");
+        data5 = DB_read("realstate");
     }
 
     @Override
@@ -58,11 +63,7 @@ public class CategoryDetailFragment extends Fragment {
         detail_explain = (TextView) linearLayout.findViewById(R.id.detail_explain);
         detail_list.setAdapter(categoryDetailAdapter);
 
-        data1 = DB_read("transport");
-        data2 = DB_read("restaurant");
-        data3 = DB_read("delivery");
-        data4 = DB_read("tour");
-        data5 = DB_read("realstate");
+
         return linearLayout;
     }
 

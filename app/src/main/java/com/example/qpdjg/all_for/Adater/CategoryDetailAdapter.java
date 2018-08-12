@@ -87,5 +87,6 @@ public class CategoryDetailAdapter extends BaseAdapter {
 
     public void setData(ArrayList<CategoryDetailItem> data) {
         this.data = data;
+        this.notifyDataSetChanged();
     }
 }

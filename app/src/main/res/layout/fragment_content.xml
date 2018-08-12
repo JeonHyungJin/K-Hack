@@ -27,6 +27,7 @@
                 android:background="@color/light_blue"/>
             
             <com.example.qpdjg.all_for.Custom.ImageViewer
+                android:id="@+id/contentImageViewer"
                 android:layout_width="match_parent"
                 android:layout_height="400dp">
 
@@ -36,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:layout_marginTop="10dp"
-                android:text="Introcude"
+                android:text="Introduce"
                 android:textSize="18dp"
                 android:textColor="@color/light_blue"/>
 
@@ -47,10 +48,32 @@
                 android:background="@color/light_blue"/>
 
             <TextView
+                android:id="@+id/contentIntroduce"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:inputType="textMultiLine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:text="Comment"
+                android:textSize="18dp"
+                android:textColor="@color/light_blue"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_blue"/>
+
+            <com.example.qpdjg.all_for.Util.NoScrollBarListview
+                android:id="@+id/contentCommentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.example.qpdjg.all_for.Util.NoScrollBarListview>
         </LinearLayout>
         
     </android.support.v4.widget.NestedScrollView>

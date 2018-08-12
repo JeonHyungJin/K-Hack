@@ -66,13 +66,11 @@ public class CategoryDetailAdapter extends BaseAdapter {
         name.setText(data.get(i).getAppname());
         subname.setText(data.get(i).getSubname());
 
-        float rank=data.get(i).getRank();
-        for(int j =0; j < (int)(rank); ++j){
+        int rank=data.get(i).getRank();
+        for(int j =0; j <rank; ++j){
             stars[j].setBackground(ContextCompat.getDrawable(context,R.drawable.star_full));
         }
-        if(rank-(int)(rank)>0){
-            stars[(int)rank].setBackground(ContextCompat.getDrawable(context,R.drawable.star_half));
-        }
+
 
         final String  toAppCall = data.get(i).getAppname();
         convertView.setOnClickListener(new View.OnClickListener() {

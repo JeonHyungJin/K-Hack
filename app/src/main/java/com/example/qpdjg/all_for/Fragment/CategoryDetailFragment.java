@@ -1,5 +1,6 @@
 package com.example.qpdjg.all_for.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -45,11 +46,7 @@ public class CategoryDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        data1 = DB_read("transport");
-        data2 = DB_read("restaurant");
-        data3 = DB_read("delivery");
-        data4 = DB_read("tour");
-        data5 = DB_read("realstate");
+
     }
 
     @Override
@@ -66,7 +63,7 @@ public class CategoryDetailFragment extends Fragment {
         return linearLayout;
     }
 
-    public ArrayList DB_read(String datail_category) {
+    public ArrayList DB_read(String datail_category,Context context) {
         final ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
 
         /*DB*/
@@ -77,16 +74,17 @@ public class CategoryDetailFragment extends Fragment {
         DatabaseReference delivery_apps_Ref = delivery_Ref.child("apps");
 
         if(datail_category.equals("transport")) {
-            sub_String = (String) getText(R.string.sub_transport);
+            sub_String = (String) context.getText(R.string.sub_transport);
         } else if(datail_category.equals("tour")) {
-            sub_String = (String) getText(R.string.sub_tour);
+            sub_String = (String) context.getText(R.string.sub_tour);
         }else if(datail_category.equals("realstate")) {
-            sub_String = (String) getText(R.string.sub_realstate);
+            sub_String = (String) context.getText(R.string.sub_realstate);
         }else if(datail_category.equals("restaurant")) {
-            sub_String = (String) getText(R.string.sub_restaurant);
+            sub_String = (String) context.getText(R.string.sub_restaurant);
         }else if(datail_category.equals("delivery")) {
-            sub_String = (String) getText(R.string.sub_delivery);
+            sub_String = (String) context.getText(R.string.sub_delivery);
         }
+
 
         //final String finalSub_String = sub_String;
         ValueEventListener valueEventListener = new ValueEventListener() {
@@ -173,5 +171,12 @@ public class CategoryDetailFragment extends Fragment {
             detail_explain.setText(getText(R.string.introduceTravel));
         }
 
+        public void dataRefresh(Context context){
+            data1 = DB_read("transport",context);
+            data2 = DB_read("restaurant",context);
+            data3 = DB_read("delivery",context);
+            data4 = DB_read("tour",context);
+            data5 = DB_read("realstate",context);
+        }
 
     }

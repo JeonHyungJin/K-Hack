@@ -5,10 +5,10 @@ package com.example.qpdjg.all_for.Item;
 public class CategoryDetailItem {
     String appname;
     String subname;
-    float rank;
+    int rank;
     String icon;
 
-    public CategoryDetailItem(String appname, String subname, float rank, String icon) {
+    public CategoryDetailItem(String appname, String subname, int rank, String icon) {
         this.appname = appname;
         this.subname = subname;
         this.rank = rank;
@@ -23,7 +23,7 @@ public class CategoryDetailItem {
         return subname;
     }
 
-    public float getRank() {
+    public int getRank() {
         return rank;
     }
 

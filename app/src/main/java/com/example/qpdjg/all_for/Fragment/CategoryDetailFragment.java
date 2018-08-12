@@ -3,6 +3,7 @@ package com.example.qpdjg.all_for.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -142,6 +143,7 @@ public class CategoryDetailFragment extends Fragment {
             detail_icon.setImageResource(R.drawable.transport_black);
             categoryDetailAdapter.setData(data1);
             detail_explain.setText(getText(R.string.introduceTrans));
+
         }
 
         private void setRestaurant () {

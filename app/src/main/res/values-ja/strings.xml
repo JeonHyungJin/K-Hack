@@ -55,6 +55,11 @@
     <string name="sub_restaurant">レストラン情報アプリ</string>
     <string name="sub_realstate">不動産アプル</string>
     <string name="sub_tour">観光案内アプリ</string>
+    <string name="ca_delivery">出前</string>
+    <string name="ca_transport">公共交通機関</string>
+    <string name="ca_restaurant">食堂</string>
+    <string name="ca_realstate">不動産</string>
+    <string name="ca_tour">旅行</string>
 </resources>
 
 

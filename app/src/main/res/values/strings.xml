@@ -55,4 +55,9 @@
     <string name="sub_restaurant">Restaurant information App</string>
     <string name="sub_realstate">Real state App</string>
     <string name="sub_tour">Tourist Information App</string>
+    <string name="ca_delivery">Food Delivery</string>
+    <string name="ca_transport">Public Transport</string>
+    <string name="ca_restaurant">Restaurant</string>
+    <string name="ca_realstate">Real Property</string>
+    <string name="ca_tour">Travel</string>
 </resources>

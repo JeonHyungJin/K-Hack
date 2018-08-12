@@ -55,6 +55,11 @@
     <string name="sub_restaurant">餐厅信息器</string>
     <string name="sub_realstate">不动产应用程序</string>
     <string name="sub_tour">旅游指南</string>
+    <string name="ca_delivery">食品送</string>
+    <string name="ca_transport">公共交通</string>
+    <string name="ca_restaurant">食堂</string>
+    <string name="ca_realstate">不动产</string>
+    <string name="ca_tour">旅行</string>
 </resources>
 
 

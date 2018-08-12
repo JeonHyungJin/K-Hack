@@ -55,5 +55,9 @@
     <string name="sub_restaurant">레스토랑 정보 어플</string>
     <string name="sub_realstate">부동산 어플</string>
     <string name="sub_tour">관광안내 어플</string>
-
+    <string name="ca_delivery">배달</string>
+    <string name="ca_transport">교통수단</string>
+    <string name="ca_restaurant">식당</string>
+    <string name="ca_realstate">부동산</string>
+    <string name="ca_tour">관광</string>
 </resources>

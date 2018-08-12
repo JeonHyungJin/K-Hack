@@ -69,6 +69,8 @@ public class CategoryDetailFragment extends Fragment {
                     System.out.println(ds.getKey().toString().trim());
                     System.out.println(ds.child("app_img").getValue().toString().trim());
                     return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), "sub", (float) 2.0, ds.child("app_img").getValue().toString().trim()));
+                for(DataSnapshot ds:dataSnapshot.getChildren()){
+                    System.out.println(ds.getValue().toString().trim());
                 }
             }
 
@@ -80,6 +82,9 @@ public class CategoryDetailFragment extends Fragment {
         delivery_apps_Ref.addListenerForSingleValueEvent(valueEventListener);
 
         return return_data;
+
+
+        return linearLayout;
     }
 
     public void setToCall(String toCall) {

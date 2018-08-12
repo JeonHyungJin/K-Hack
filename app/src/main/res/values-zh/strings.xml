@@ -60,6 +60,9 @@
     <string name="ca_restaurant">食堂</string>
     <string name="ca_realstate">不动产</string>
     <string name="ca_tour">旅行</string>
+    <string name="suggest">推荐应用程序</string>
+    <string name="best">人气应用程序</string>
+    <string name="ad">广告</string>
 </resources>
 
 

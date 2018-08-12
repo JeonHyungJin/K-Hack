@@ -60,4 +60,7 @@
     <string name="ca_restaurant">Restaurant</string>
     <string name="ca_realstate">Real Property</string>
     <string name="ca_tour">Travel</string>
+    <string name="suggest">Suggested Apps</string>
+    <string name="best">Best Apps</string>
+    <string name="ad">AD</string>
 </resources>

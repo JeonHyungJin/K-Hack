@@ -27,13 +27,13 @@
                 android:visibility="visible">
 
                 <TextView
+                    android:id="@+id/suggest_t"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="8dp"
                     android:text="Suggested Apps"
                     android:textSize="16dp"
-
                     android:textStyle="bold"/>
 
 
@@ -225,6 +225,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:text="Best Apps"
+                    android:id="@+id/best_t"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
@@ -355,6 +356,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:text="AD"
+                    android:id="@+id/ad_t"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 

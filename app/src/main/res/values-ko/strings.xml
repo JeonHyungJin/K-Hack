@@ -60,4 +60,7 @@
     <string name="ca_restaurant">식당</string>
     <string name="ca_realstate">부동산</string>
     <string name="ca_tour">관광</string>
+    <string name="suggest">추천어플</string>
+    <string name="best">인기어플</string>
+    <string name="ad">광고</string>
 </resources>

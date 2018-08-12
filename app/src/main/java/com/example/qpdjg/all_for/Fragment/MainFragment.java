@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.qpdjg.all_for.Adater.ViewpagerAdapter;
 import com.example.qpdjg.all_for.R;
@@ -35,8 +36,37 @@ public class MainFragment  extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout linearLayout=(LinearLayout)inflater.inflate(R.layout.fragment_main,container,false);
-        ImageView imageView1 = (ImageView) linearLayout.findViewById(R.id.horizon_icon1);
 
+        TextView suggest = (TextView)linearLayout.findViewById(R.id.suggest_t);
+        TextView best = linearLayout.findViewById(R.id.best_t);
+        TextView ad = linearLayout.findViewById(R.id.ad_t);
+
+        suggest.setText(R.string.suggest);
+        best.setText(R.string.best);
+        ad.setText(R.string.ad);
+
+        TextView textView1 = (TextView) linearLayout.findViewById(R.id.horizon_description1_2);
+        TextView textView2 = (TextView) linearLayout.findViewById(R.id.horizon_description2_2);
+        TextView textView3 = (TextView) linearLayout.findViewById(R.id.horizon_description3_2);
+        TextView textView4 = (TextView) linearLayout.findViewById(R.id.horizon_description4_2);
+        TextView textView5 = (TextView) linearLayout.findViewById(R.id.horizon_description5_2);
+
+        textView1.setText(R.string.ca_restaurant);
+        textView2.setText(R.string.ca_delivery);
+        textView3.setText(R.string.ca_transport);
+        textView4.setText(R.string.ca_realstate);
+        textView5.setText(R.string.ca_tour);
+
+        TextView textView6 = (TextView) linearLayout.findViewById(R.id.best_description1_2);
+        TextView textView7 = (TextView) linearLayout.findViewById(R.id.best_description2_2);
+        TextView textView8 = (TextView) linearLayout.findViewById(R.id.best_description3_2);
+
+        textView6.setText(R.string.ca_restaurant);
+        textView7.setText(R.string.ca_delivery);
+        textView8.setText(R.string.ca_transport);
+
+
+        ImageView imageView1 = (ImageView) linearLayout.findViewById(R.id.horizon_icon1);
         ImageView imageView2 = (ImageView) linearLayout.findViewById(R.id.horizon_icon2);
         ImageView imageView3 = (ImageView) linearLayout.findViewById(R.id.horizon_icon3);
         ImageView imageView4 = (ImageView) linearLayout.findViewById(R.id.horizon_icon4);

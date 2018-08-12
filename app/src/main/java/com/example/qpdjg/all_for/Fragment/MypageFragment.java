@@ -140,7 +140,7 @@ public class MypageFragment extends Fragment {
                     String FB_email = ds.child("E_mail").getValue(String.class);
 
                     if (user.getEmail().equals(FB_email)) {
-                        Point_Text.setText(FB_Point + "Point");
+                        Point_Text.setText(FB_Point + " Point");
                         break;
                     }
                 }

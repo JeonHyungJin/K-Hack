@@ -33,6 +33,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
         categoryFragment.setViewPager(viewPager);
         categoryDetailFragment.setViewPager(viewPager);
         categoryDetailFragment.dataRefresh(context);
+        mypageFragment.refreshData();
     }
 
     @Override

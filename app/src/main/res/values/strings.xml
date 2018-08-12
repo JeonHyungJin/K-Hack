@@ -54,5 +54,5 @@
     <string name="sub_transport">Traffic Information App</string>
     <string name="sub_restaurant">Restaurant information App</string>
     <string name="sub_realstate">Real state App</string>
-    <string name="sub_travel">Tourist Information App</string>
+    <string name="sub_tour">Tourist Information App</string>
 </resources>

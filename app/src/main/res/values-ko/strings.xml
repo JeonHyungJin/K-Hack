@@ -54,6 +54,6 @@
     <string name="sub_transport">교통정보 어플</string>
     <string name="sub_restaurant">레스토랑 정보 어플</string>
     <string name="sub_realstate">부동산 어플</string>
-    <string name="sub_travel">관광안내 어플</string>
+    <string name="sub_tour">관광안내 어플</string>
 
 </resources>

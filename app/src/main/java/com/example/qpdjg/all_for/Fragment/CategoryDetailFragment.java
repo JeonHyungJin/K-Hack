@@ -33,6 +33,7 @@ public class CategoryDetailFragment extends Fragment {
     CategoryDetailAdapter categoryDetailAdapter;
     Locale lang;
     ImageView detail_icon;
+    String sub_String = null;
     ArrayList<CategoryDetailItem> data = new ArrayList<CategoryDetailItem>();
     ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
 
@@ -62,13 +63,26 @@ public class CategoryDetailFragment extends Fragment {
         DatabaseReference delivery_Ref = category_Ref.child(datail_category);
         DatabaseReference delivery_apps_Ref = delivery_Ref.child("apps");
 
+        if(datail_category.equals("transport")) {
+            sub_String = (String) getText(R.string.sub_transport);
+        } else if(datail_category.equals("tour")) {
+            sub_String = (String) getText(R.string.sub_tour);
+        }else if(datail_category.equals("realstate")) {
+            sub_String = (String) getText(R.string.sub_realstate);
+        }else if(datail_category.equals("restaurant")) {
+            sub_String = (String) getText(R.string.sub_restaurant);
+        }else if(datail_category.equals("delivery")) {
+            sub_String = (String) getText(R.string.sub_delivery);
+        }
+
+        //final String finalSub_String = sub_String;
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     System.out.println(ds.getKey().toString().trim());
                     System.out.println(ds.child("app_img").getValue().toString().trim());
-                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), "sub", (float) 2.0, ds.child("app_img").getValue().toString().trim()));
+                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, (float) 2.0, ds.child("app_img").getValue().toString().trim()));
 
                 }
 
@@ -113,7 +127,7 @@ public class CategoryDetailFragment extends Fragment {
         private void setTransport () {
             detail.setText("Transport");
             detail_icon.setImageResource(R.drawable.transport_black);
-            data = DB_read("transport");;
+            data = DB_read("transport");
             detail_explain.setText(getText(R.string.introduceTrans));
         }
 

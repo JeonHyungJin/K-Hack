@@ -45,9 +45,6 @@ public class MainActivity extends TitlebarActivity {
 
     }
 
-    public void refresh(){
-        viewpagerAdapter.notifyDataSetChanged();
-    }
     @Override
     public void onBackPressed() {
         long tempTime = System.currentTimeMillis();

@@ -35,7 +35,6 @@ public class CategoryDetailFragment extends Fragment {
     ImageView detail_icon;
     String sub_String = null;
     ArrayList<CategoryDetailItem> data = new ArrayList<CategoryDetailItem>();
-    ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
 
     ArrayList<CategoryDetailItem>data1= new ArrayList<CategoryDetailItem>();
     ArrayList<CategoryDetailItem>data2= new ArrayList<CategoryDetailItem>();
@@ -68,7 +67,10 @@ public class CategoryDetailFragment extends Fragment {
     }
 
     public ArrayList DB_read(String datail_category) {
+        final ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
+
         /*DB*/
+        //System.out.println(datail_category);
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference category_Ref = rootRef.child("app_category");
         DatabaseReference delivery_Ref = category_Ref.child(datail_category);
@@ -160,14 +162,14 @@ public class CategoryDetailFragment extends Fragment {
         private void setProperty () {
             detail.setText("Real Property");
             detail_icon.setImageResource(R.drawable.house_black);
-            categoryDetailAdapter.setData(data4);
+            categoryDetailAdapter.setData(data5);
             detail_explain.setText(getText(R.string.introducePro));
         }
 
         private void setTravel () {
             detail.setText("Travel");
             detail_icon.setImageResource(R.drawable.travel_black);
-            categoryDetailAdapter.setData(data5);
+            categoryDetailAdapter.setData(data4);
             detail_explain.setText(getText(R.string.introduceTravel));
         }
 

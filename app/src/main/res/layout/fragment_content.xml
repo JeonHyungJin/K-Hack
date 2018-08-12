@@ -10,22 +10,25 @@
         android:fadingEdge="none"
         android:overScrollMode="never"
         android:scrollbars="none">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:text="Translated Scene"
-                android:textSize="18dp"
-                android:textColor="@color/light_blue"/>
+                android:textColor="@color/light_blue"
+                android:textSize="18dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/light_blue"/>
-            
+                android:background="@color/light_blue" />
+
             <com.example.qpdjg.all_for.Custom.ImageViewer
                 android:id="@+id/contentImageViewer"
                 android:layout_width="match_parent"
@@ -38,14 +41,14 @@
                 android:layout_height="22dp"
                 android:layout_marginTop="10dp"
                 android:text="Introduce"
-                android:textSize="18dp"
-                android:textColor="@color/light_blue"/>
+                android:textColor="@color/light_blue"
+                android:textSize="18dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/light_blue"/>
+                android:background="@color/light_blue" />
 
             <TextView
                 android:id="@+id/contentIntroduce"
@@ -54,19 +57,98 @@
                 android:gravity="left"
                 android:inputType="textMultiLine" />
 
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Review"
+                        android:textColor="@color/light_blue"
+                        android:textSize="18dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:weightSum="10">
+
+                        <com.example.qpdjg.all_for.Custom.StarBar
+                            android:id="@+id/contentStarbar"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4">
+
+                        </com.example.qpdjg.all_for.Custom.StarBar>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_blue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_white">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="left|top"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contentComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_light_blue"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:layout_marginTop="10dp"
                 android:text="Comment"
-                android:textSize="18dp"
-                android:textColor="@color/light_blue"/>
+                android:textColor="@color/light_blue"
+                android:textSize="18dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/light_blue"/>
+                android:background="@color/light_blue" />
 
             <com.example.qpdjg.all_for.Util.NoScrollBarListview
                 android:id="@+id/contentCommentView"
@@ -75,6 +157,6 @@
 
             </com.example.qpdjg.all_for.Util.NoScrollBarListview>
         </LinearLayout>
-        
+
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

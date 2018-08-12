@@ -94,12 +94,8 @@ public class CategoryDetailFragment extends Fragment {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     System.out.println(ds.getKey().toString().trim());
                     System.out.println(ds.child("app_img").getValue().toString().trim());
-<<<<<<< HEAD
-                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, 1, ds.child("app_img").getValue().toString().trim()));
 
-=======
                     return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, 2, ds.child("app_img").getValue().toString().trim()));
->>>>>>> 587ab5eff2213b626ef233f015faedfe8a063316
                 }
 
             }

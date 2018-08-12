@@ -61,7 +61,7 @@ public class CategoryDetailFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds:dataSnapshot.getChildren()){
-                    System.out.println(ds.child("app_img").getValue().toString().trim());
+                    System.out.println(ds.getValue().toString().trim());
                 }
             }
 
@@ -71,11 +71,6 @@ public class CategoryDetailFragment extends Fragment {
             }
         };
         delivery_apps_Ref.addListenerForSingleValueEvent(valueEventListener);
-
-
-
-
-
 
 
 

@@ -31,7 +31,7 @@ public class MainActivity extends TitlebarActivity {
         viewPager=(CustomViewPager)findViewById(R.id.viewpager);
         viewPager.setSwipeEnabled(false);
 
-        viewpagerAdapter =new ViewpagerAdapter(getSupportFragmentManager(),MAX_PAGE,viewPager);
+        viewpagerAdapter =new ViewpagerAdapter(getSupportFragmentManager(),MAX_PAGE,viewPager,this);
         getViewPagerPage = new GetViewPagerPage();
 
         viewPager.setAdapter(viewpagerAdapter);

@@ -64,7 +64,7 @@ public class MypageFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         //유저가 로그인 하지 않은 상태라면 null 상태이고 이 액티비티를 종료하고 로그인 액티비티를 연다.
         if(firebaseAuth.getCurrentUser() == null) {
-           // finish();
+            // finish();
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
 
@@ -81,10 +81,10 @@ public class MypageFragment extends Fragment {
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    firebaseAuth.signOut();
-                    Intent intent = new Intent(getActivity(), LoginActivity.class);
-                    getActivity().finish();
-                    startActivity(intent);
+                firebaseAuth.signOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                getActivity().finish();
+                startActivity(intent);
 
             }
         });
@@ -158,7 +158,7 @@ public class MypageFragment extends Fragment {
         spinner.setOnItemSelectedListener(new OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-              //  String show = getResources().getString(R.string.change_lang);
+                //  String show = getResources().getString(R.string.change_lang);
                 String text = spinner.getSelectedItem().toString();
                 if(text!="Language") {
                     if(text=="한국어"){
@@ -194,9 +194,5 @@ public class MypageFragment extends Fragment {
     }
 
     public void refreshData(){
-<<<<<<< HEAD
-
-=======
->>>>>>> 587ab5eff2213b626ef233f015faedfe8a063316
     }
 }

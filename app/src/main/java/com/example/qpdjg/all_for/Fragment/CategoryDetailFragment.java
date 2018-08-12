@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,10 +95,6 @@ public class CategoryDetailFragment extends Fragment {
                     System.out.println(ds.getKey().toString().trim());
                     System.out.println(ds.child("app_img").getValue().toString().trim());
                     return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, 2, ds.child("app_img").getValue().toString().trim()));
-<<<<<<< HEAD
-
-=======
->>>>>>> 587ab5eff2213b626ef233f015faedfe8a063316
                 }
 
             }
@@ -115,73 +110,72 @@ public class CategoryDetailFragment extends Fragment {
         return return_data;
     }
 
-        public void setToCall (String toCall){
+    public void setToCall (String toCall){
 
-            this.toCall = toCall;
+        this.toCall = toCall;
 
-            Locale systemLocale = getResources().getConfiguration().locale;
-            String strLanguage = systemLocale.getLanguage();
-            if (toCall == "transport") {
-                setTransport();
-            } else if (toCall == "restaurant") {
-                setRestaurant();
-            } else if (toCall == "delivery") {
-                setDelivery();
-            } else if (toCall == "property") {
-                setProperty();
-            } else if (toCall == "travel") {
-                setTravel();
-            }
-            categoryDetailAdapter.notifyDataSetChanged();
+        Locale systemLocale = getResources().getConfiguration().locale;
+        String strLanguage = systemLocale.getLanguage();
+        if (toCall == "transport") {
+            setTransport();
+        } else if (toCall == "restaurant") {
+            setRestaurant();
+        } else if (toCall == "delivery") {
+            setDelivery();
+        } else if (toCall == "property") {
+            setProperty();
+        } else if (toCall == "travel") {
+            setTravel();
         }
+        categoryDetailAdapter.notifyDataSetChanged();
+    }
 
-        public void setViewPager (CustomViewPager viewPager){
-            this.viewPager = viewPager;
-        }
+    public void setViewPager (CustomViewPager viewPager){
+        this.viewPager = viewPager;
+    }
 
-        private void setTransport () {
-            detail.setText("Transport");
-            detail_icon.setImageResource(R.drawable.transport_black);
-            categoryDetailAdapter.setData(data1);
-            detail_explain.setText(getText(R.string.introduceTrans));
+    private void setTransport () {
+        detail.setText("Transport");
+        detail_icon.setImageResource(R.drawable.transport_black);
+        categoryDetailAdapter.setData(data1);
+        detail_explain.setText(getText(R.string.introduceTrans));
+    }
 
-        }
+    private void setRestaurant () {
+        detail.setText("Restaurant");
+        detail_icon.setImageResource(R.drawable.restaurant_black);
+        categoryDetailAdapter.setData(data2);
+        detail_explain.setText(getText(R.string.introduceRest));
+    }
 
-        private void setRestaurant () {
-            detail.setText("Restaurant");
-            detail_icon.setImageResource(R.drawable.restaurant_black);
-            categoryDetailAdapter.setData(data2);
-            detail_explain.setText(getText(R.string.introduceRest));
-        }
-
-        private void setDelivery () {
-            detail.setText("Food Delivery");
-            detail_icon.setImageResource(R.drawable.food_delivery_black);
-            categoryDetailAdapter.setData(data3);
-            detail_explain.setText(getText(R.string.introduceDeli));
-
-        }
-
-        private void setProperty () {
-            detail.setText("Real Property");
-            detail_icon.setImageResource(R.drawable.house_black);
-            categoryDetailAdapter.setData(data5);
-            detail_explain.setText(getText(R.string.introducePro));
-        }
-
-        private void setTravel () {
-            detail.setText("Travel");
-            detail_icon.setImageResource(R.drawable.travel_black);
-            categoryDetailAdapter.setData(data4);
-            detail_explain.setText(getText(R.string.introduceTravel));
-        }
-
-        public void dataRefresh(Context context){
-            data1 = DB_read("transport",context);
-            data2 = DB_read("restaurant",context);
-            data3 = DB_read("delivery",context);
-            data4 = DB_read("tour",context);
-            data5 = DB_read("realstate",context);
-        }
+    private void setDelivery () {
+        detail.setText("Food Delivery");
+        detail_icon.setImageResource(R.drawable.food_delivery_black);
+        categoryDetailAdapter.setData(data3);
+        detail_explain.setText(getText(R.string.introduceDeli));
 
     }
+
+    private void setProperty () {
+        detail.setText("Real Property");
+        detail_icon.setImageResource(R.drawable.house_black);
+        categoryDetailAdapter.setData(data5);
+        detail_explain.setText(getText(R.string.introducePro));
+    }
+
+    private void setTravel () {
+        detail.setText("Travel");
+        detail_icon.setImageResource(R.drawable.travel_black);
+        categoryDetailAdapter.setData(data4);
+        detail_explain.setText(getText(R.string.introduceTravel));
+    }
+
+    public void dataRefresh(Context context){
+        data1 = DB_read("transport",context);
+        data2 = DB_read("restaurant",context);
+        data3 = DB_read("delivery",context);
+        data4 = DB_read("tour",context);
+        data5 = DB_read("realstate",context);
+    }
+
+}

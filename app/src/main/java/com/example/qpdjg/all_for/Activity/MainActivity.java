@@ -24,6 +24,7 @@ public class MainActivity extends TitlebarActivity {
     CustomViewPager viewPager;
     BottomTab bottomTab;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -42,6 +43,10 @@ public class MainActivity extends TitlebarActivity {
         bottomTab.setViewpager(viewPager);
 
 
+    }
+
+    public void refresh(){
+        viewpagerAdapter.notifyDataSetChanged();
     }
     @Override
     public void onBackPressed() {

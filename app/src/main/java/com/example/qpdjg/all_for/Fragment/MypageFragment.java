@@ -7,25 +7,21 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.*;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Spinner;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.content.Context;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.qpdjg.all_for.Activity.LoginActivity;
 import com.example.qpdjg.all_for.Activity.MainActivity;
-import com.example.qpdjg.all_for.Activity.ProfileActivity;
 import com.example.qpdjg.all_for.R;
-import com.example.qpdjg.all_for.Util.Profile_data;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 
 public class MypageFragment extends Fragment {
 
@@ -137,7 +133,7 @@ public class MypageFragment extends Fragment {
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                ((MainActivity)getActivity()).refresh();
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
                     String FB_Point = ds.child("Point").getValue(String.class);
                     String FB_firebaseKey = ds.child("firebaseKey").getValue(String.class);
@@ -198,6 +194,9 @@ public class MypageFragment extends Fragment {
     }
 
     public void refreshData(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 587ab5eff2213b626ef233f015faedfe8a063316
     }
 }

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class CategoryDetailFragment extends Fragment {
     TextView detail_explain;
     CategoryDetailAdapter categoryDetailAdapter;
     Locale lang;
+    ImageView detail_icon;
     ArrayList<CategoryDetailItem> data = new ArrayList<CategoryDetailItem>();
 
     @Override
@@ -36,6 +38,7 @@ public class CategoryDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_cataory_detail, container, false);
         detail = (TextView) linearLayout.findViewById(R.id.detail);
+        detail_icon = (ImageView) linearLayout.findViewById(R.id.detail_icon);
         detail_list = (ListView) linearLayout.findViewById(R.id.detail_list);
         categoryDetailAdapter = new CategoryDetailAdapter(getContext(), R.layout.item_detail, data, viewPager);
         detail_explain = (TextView) linearLayout.findViewById(R.id.detail_explain);
@@ -70,26 +73,31 @@ public class CategoryDetailFragment extends Fragment {
 
     private void setTransport() {
         detail.setText("Transport");
+        detail_icon.setImageResource(R.drawable.transport_black);
         detail_explain.setText(getText(R.string.introduceTrans));
     }
 
     private void setRestaurant() {
         detail.setText("Restaurant");
+        detail_icon.setImageResource(R.drawable.restaurant_black);
         detail_explain.setText(getText(R.string.introduceRest));
     }
 
     private void setDelivery() {
         detail.setText("Food Delivery");
+        detail_icon.setImageResource(R.drawable.food_delivery_black);
         detail_explain.setText(getText(R.string.introduceDeli));
     }
 
     private void setProperty() {
         detail.setText("Real Property");
+        detail_icon.setImageResource(R.drawable.house_black);
         detail_explain.setText(getText(R.string.introducePro));
     }
 
     private void setTravel() {
         detail.setText("Travel");
+        detail_icon.setImageResource(R.drawable.travel_black);
         detail_explain.setText(getText(R.string.introduceTravel));
     }
 

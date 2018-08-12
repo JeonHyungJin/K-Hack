@@ -57,7 +57,6 @@ public class CategoryDetailFragment extends Fragment {
 
     public ArrayList DB_read(String datail_category) {
         /*DB*/
-        //return_data.clear();
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference category_Ref = rootRef.child("app_category");
         DatabaseReference delivery_Ref = category_Ref.child(datail_category);
@@ -79,6 +78,7 @@ public class CategoryDetailFragment extends Fragment {
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                return_data.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     System.out.println(ds.getKey().toString().trim());
                     System.out.println(ds.child("app_img").getValue().toString().trim());

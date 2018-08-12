@@ -64,27 +64,16 @@ public class CategoryDetailFragment extends Fragment {
         return linearLayout;
     }
 
-    public ArrayList DB_read(String datail_category,Context context) {
+    public ArrayList DB_read(String datail_category,final Context context) {
         final ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
 
         /*DB*/
-        //System.out.println(datail_category);
+        System.out.println(datail_category);
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference category_Ref = rootRef.child("app_category");
         DatabaseReference delivery_Ref = category_Ref.child(datail_category);
         DatabaseReference delivery_apps_Ref = delivery_Ref.child("apps");
 
-        if(datail_category.equals("transport")) {
-            sub_String = (String) context.getText(R.string.sub_transport);
-        } else if(datail_category.equals("tour")) {
-            sub_String = (String) context.getText(R.string.sub_tour);
-        }else if(datail_category.equals("realstate")) {
-            sub_String = (String) context.getText(R.string.sub_realstate);
-        }else if(datail_category.equals("restaurant")) {
-            sub_String = (String) context.getText(R.string.sub_restaurant);
-        }else if(datail_category.equals("delivery")) {
-            sub_String = (String) context.getText(R.string.sub_delivery);
-        }
 
 
         //final String finalSub_String = sub_String;
@@ -108,6 +97,22 @@ public class CategoryDetailFragment extends Fragment {
                     }else{
                         aver_rank = 0;
                     }
+
+                    DatabaseReference ref = ds.getRef();
+
+
+                    if(ref.getParent().getParent().toString().equals("https://all-for-b9d5b.firebaseio.com/app_category/transport")) {
+                        sub_String = (String)context.getText(R.string.sub_transport);
+                    } else if(ref.getParent().getParent().toString().equals("https://all-for-b9d5b.firebaseio.com/app_category/tour")) {
+                        sub_String = (String)context.getText(R.string.sub_tour);
+                    }else if(ref.getParent().getParent().toString().equals("https://all-for-b9d5b.firebaseio.com/app_category/realstate")) {
+                        sub_String = (String)context.getText(R.string.sub_realstate);
+                    }else if(ref.getParent().getParent().toString().equals("https://all-for-b9d5b.firebaseio.com/app_category/restaurant")) {
+                        sub_String = (String)context.getText(R.string.sub_restaurant);
+                    }else if(ref.getParent().getParent().toString().equals("https://all-for-b9d5b.firebaseio.com/app_category/delivery")) {
+                        sub_String = (String)context.getText(R.string.sub_delivery);
+                    }
+
                     return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, aver_rank, ds.child("app_img").getValue().toString().trim()));
                 }
 

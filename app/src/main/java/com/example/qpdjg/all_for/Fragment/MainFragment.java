@@ -4,8 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,22 +20,19 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MainFragment  extends Fragment {
-
-    private RecyclerView mVerticalView;
-    private ViewpagerAdapter mAdapter;
-    private LinearLayoutManager mLayoutManager;
+public class MainFragment extends Fragment {
     Bitmap bitmap;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout linearLayout=(LinearLayout)inflater.inflate(R.layout.fragment_main,container,false);
+        LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_main, container, false);
 
-        TextView suggest = (TextView)linearLayout.findViewById(R.id.suggest_t);
+        TextView suggest = (TextView) linearLayout.findViewById(R.id.suggest_t);
         TextView best = linearLayout.findViewById(R.id.best_t);
         TextView ad = linearLayout.findViewById(R.id.ad_t);
 
@@ -77,16 +72,15 @@ public class MainFragment  extends Fragment {
         ImageView imageView8 = (ImageView) linearLayout.findViewById(R.id.best_icon3);
 
 
-        network_image("https://lh3.googleusercontent.com/Zc6zChInlUNc7fGESdXJcBHrelfgXRB5TeJkhJ3N15noXE8O0RwcrLsgjuXyJQoUdmE=s360-rw",imageView1);
-        network_image("https://lh3.googleusercontent.com/sz7a02Naspr5ANElxz2tPpcgwogBoSoHLPSm-mlYuIEiGjeo6ZzuwB3SDJ5M48Bfhe8=s360-rw",imageView2);
-        network_image("https://lh3.googleusercontent.com/LvEJYY67s2TWTlmo0keXjNmG-WZ17wx0LgNMCcxYcfXuMJejxu_A5LI9ERvOJYNU8g=s360-rw",imageView3);
-        network_image("https://lh3.googleusercontent.com/QBnly97i31doJhP6E_PF2cmzIuXFzbFBDnuiy_DkzjNJtcqAFwPHwLfCe0B0_z7a4fWO=s360-rw",imageView4);
-        network_image("https://lh3.googleusercontent.com/WJD-xZb6qnlrdFaQyS2h5PHaXhEJ1-yHRcHfqJEpqlMRJuKZQA7Evxd_Dpip92Hsqe8=s360-rw",imageView5);
+        network_image("https://lh3.googleusercontent.com/Zc6zChInlUNc7fGESdXJcBHrelfgXRB5TeJkhJ3N15noXE8O0RwcrLsgjuXyJQoUdmE=s360-rw", imageView1);
+        network_image("https://lh3.googleusercontent.com/sz7a02Naspr5ANElxz2tPpcgwogBoSoHLPSm-mlYuIEiGjeo6ZzuwB3SDJ5M48Bfhe8=s360-rw", imageView2);
+        network_image("https://lh3.googleusercontent.com/LvEJYY67s2TWTlmo0keXjNmG-WZ17wx0LgNMCcxYcfXuMJejxu_A5LI9ERvOJYNU8g=s360-rw", imageView3);
+        network_image("https://lh3.googleusercontent.com/QBnly97i31doJhP6E_PF2cmzIuXFzbFBDnuiy_DkzjNJtcqAFwPHwLfCe0B0_z7a4fWO=s360-rw", imageView4);
+        network_image("https://lh3.googleusercontent.com/WJD-xZb6qnlrdFaQyS2h5PHaXhEJ1-yHRcHfqJEpqlMRJuKZQA7Evxd_Dpip92Hsqe8=s360-rw", imageView5);
 
-        network_image("https://lh3.googleusercontent.com/OJzhHQMc08Y1yUfjdL1F1Ohv2hjqgaPwyoMMbgg12qgh0C8dZf5pNOmiLDlwJidARCi_=s360-rw",imageView6);
-        network_image("https://lh3.googleusercontent.com/NzeXFp0TGGcZoVSk_xzwdB567WurfscKr2j3pT5oKjWH00-tqBKF9LSnRK0sckgE7TQ=s360-rw",imageView7);
-        network_image("https://lh3.googleusercontent.com/-aW4PDSH3gI8d2I7zKdYkhrWcRema_GRaov0PnDs15W9FHrzFL5FpN85MNJ1EHzpnCc=s360-rw",imageView8);
-
+        network_image("https://lh3.googleusercontent.com/OJzhHQMc08Y1yUfjdL1F1Ohv2hjqgaPwyoMMbgg12qgh0C8dZf5pNOmiLDlwJidARCi_=s360-rw", imageView6);
+        network_image("https://lh3.googleusercontent.com/NzeXFp0TGGcZoVSk_xzwdB567WurfscKr2j3pT5oKjWH00-tqBKF9LSnRK0sckgE7TQ=s360-rw", imageView7);
+        network_image("https://lh3.googleusercontent.com/-aW4PDSH3gI8d2I7zKdYkhrWcRema_GRaov0PnDs15W9FHrzFL5FpN85MNJ1EHzpnCc=s360-rw", imageView8);
 
 
         return linearLayout;
@@ -119,9 +113,6 @@ public class MainFragment  extends Fragment {
             e.printStackTrace();
         }
     }
-
-
-
 
 
 }

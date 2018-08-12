@@ -50,4 +50,9 @@
     <string name="introduceDeli">As a unique Korean culture, when you order food using a phone or app, bring the food to the place where you want. You can also deliver it late into the night and get a discount within the app itself.</string>
     <string name="introducePro">You can compare the price and features of the room you want to save without having to make a real estate as an app that will help you to find rooms to live for a long time or for a certain period of time</string>
     <string name="introduceTravel">As an app that introduces and shows famous tourist attractions in Korea, users can check out sightseeing places in a specific area, as well as reviews and main food items of people who have already visited.</string>
+    <string name="sub_delivery">delivery service</string>
+    <string name="sub_transport">Traffic Information App</string>
+    <string name="sub_restaurant">Restaurant information App</string>
+    <string name="sub_realstate">Real state App</string>
+    <string name="sub_travel">Tourist Information App</string>
 </resources>

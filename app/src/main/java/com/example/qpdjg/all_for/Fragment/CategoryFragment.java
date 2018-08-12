@@ -36,7 +36,6 @@ public class CategoryFragment extends Fragment{
         data.add(new CategoryItem(ContextCompat.getDrawable(getContext(),R.drawable.house),getResources().getString(R.string.ca_realstate), "property"));
         data.add(new CategoryItem(ContextCompat.getDrawable(getContext(),R.drawable.travel),getResources().getString(R.string.ca_tour), "travel"));
 
-
         CategoryAdapter categoryAdapter = new CategoryAdapter(getContext(),R.layout.item_catagory,data,viewPager);
 
         catagoty = (ListView)linearLayout.findViewById(R.id.cataory_list);

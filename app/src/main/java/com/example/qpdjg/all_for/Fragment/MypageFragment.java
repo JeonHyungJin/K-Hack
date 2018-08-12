@@ -198,6 +198,6 @@ public class MypageFragment extends Fragment {
     }
 
     public void refreshData(){
-        
+
     }
 }

@@ -22,7 +22,7 @@
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/transport_black" />
+            android:background="@android:drawable/menuitem_background" />
 
         <TextView
             android:id="@+id/detail"

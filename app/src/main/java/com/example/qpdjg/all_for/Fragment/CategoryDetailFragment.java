@@ -37,6 +37,12 @@ public class CategoryDetailFragment extends Fragment {
     ArrayList<CategoryDetailItem> data = new ArrayList<CategoryDetailItem>();
     ArrayList<CategoryDetailItem> return_data = new ArrayList<CategoryDetailItem>();
 
+    ArrayList<CategoryDetailItem>data1= new ArrayList<CategoryDetailItem>();
+    ArrayList<CategoryDetailItem>data2= new ArrayList<CategoryDetailItem>();
+    ArrayList<CategoryDetailItem>data3= new ArrayList<CategoryDetailItem>();
+    ArrayList<CategoryDetailItem>data4= new ArrayList<CategoryDetailItem>();
+    ArrayList<CategoryDetailItem>data5= new ArrayList<CategoryDetailItem>();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +58,11 @@ public class CategoryDetailFragment extends Fragment {
         detail_explain = (TextView) linearLayout.findViewById(R.id.detail_explain);
         detail_list.setAdapter(categoryDetailAdapter);
 
+        data1 = DB_read("transport");
+        data2 = DB_read("restaurant");
+        data3 = DB_read("delivery");
+        data4 = DB_read("tour");
+        data5 = DB_read("realstate");
         return linearLayout;
     }
 
@@ -116,7 +127,6 @@ public class CategoryDetailFragment extends Fragment {
             } else if (toCall == "travel") {
                 setTravel();
             }
-            categoryDetailAdapter.setData(data);
             categoryDetailAdapter.notifyDataSetChanged();
         }
 
@@ -127,21 +137,21 @@ public class CategoryDetailFragment extends Fragment {
         private void setTransport () {
             detail.setText("Transport");
             detail_icon.setImageResource(R.drawable.transport_black);
-            data = DB_read("transport");
+            categoryDetailAdapter.setData(data1);
             detail_explain.setText(getText(R.string.introduceTrans));
         }
 
         private void setRestaurant () {
             detail.setText("Restaurant");
             detail_icon.setImageResource(R.drawable.restaurant_black);
-            data = DB_read("restaurant");
+            categoryDetailAdapter.setData(data2);
             detail_explain.setText(getText(R.string.introduceRest));
         }
 
         private void setDelivery () {
             detail.setText("Food Delivery");
             detail_icon.setImageResource(R.drawable.food_delivery_black);
-            data = DB_read("delivery");
+            categoryDetailAdapter.setData(data3);
             detail_explain.setText(getText(R.string.introduceDeli));
 
         }
@@ -149,14 +159,14 @@ public class CategoryDetailFragment extends Fragment {
         private void setProperty () {
             detail.setText("Real Property");
             detail_icon.setImageResource(R.drawable.house_black);
-            data = DB_read("realstate");
+            categoryDetailAdapter.setData(data4);
             detail_explain.setText(getText(R.string.introducePro));
         }
 
         private void setTravel () {
             detail.setText("Travel");
             detail_icon.setImageResource(R.drawable.travel_black);
-            data = DB_read("tour");
+            categoryDetailAdapter.setData(data5);
             detail_explain.setText(getText(R.string.introduceTravel));
         }
 

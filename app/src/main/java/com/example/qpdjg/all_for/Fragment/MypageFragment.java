@@ -196,4 +196,8 @@ public class MypageFragment extends Fragment {
 
         return linearLayout;
     }
+
+    public void refreshData(){
+        
+    }
 }

@@ -89,6 +89,8 @@ public class SignUpActivity extends TitlebarActivity implements View.OnClickList
         String password = editTextPassword.getText().toString().trim();
         String password_confirm = editTextPassword_confirm.getText().toString().trim();
         String tokenID = FirebaseInstanceId.getInstance().getToken();
+        int index = email.indexOf("@");
+        String save_email = email.substring(0,index);
         //        mReference.child("message").push().setValue("2");
         mReference = mDatabase.getReference("UserProfile");
         if(!TextUtils.isEmpty(tokenID)) {
@@ -97,7 +99,7 @@ public class SignUpActivity extends TitlebarActivity implements View.OnClickList
             profile_data.UserName = editTextName.getText().toString().trim();
             profile_data.Point = "0";
             profile_data.E_mail = email;
-            mReference.child(tokenID).setValue(profile_data);
+            mReference.child(save_email).setValue(profile_data);
         }
 
         //email과 password가 비었는지 아닌지를 체크 한다.

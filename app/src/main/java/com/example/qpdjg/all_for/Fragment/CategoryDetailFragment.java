@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qpdjg.all_for.Activity.MainActivity;
+import com.example.qpdjg.all_for.Adater.CategoryAdapter;
 import com.example.qpdjg.all_for.Adater.CategoryDetailAdapter;
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryDetailItem;
@@ -156,11 +157,23 @@ public class CategoryDetailFragment extends Fragment {
                     Configuration config = new Configuration();
                     config.locale = lang;
                     getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+                    if (toCall == "transport") {
+                        categoryDetailAdapter.setData(data1);
+                    } else if (toCall == "restaurant") {
+                        categoryDetailAdapter.setData(data2);
+                    } else if (toCall == "delivery") {
+                        categoryDetailAdapter.setData(data3);
+                    } else if (toCall == "property") {
+                        categoryDetailAdapter.setData(data5);
+                    } else if (toCall == "travel") {
+                        categoryDetailAdapter.setData(data4);
+                    }
+
                     /*
-                    *
-                    * 여기 부분 까지 오면 data1 ~ data5가 원하는 정렬 방식으로 모두 정렬되있으니까 ListView만 새로고침해줘
-                    *
-                    * */
+                     *
+                     * 여기 부분 까지 오면 data1 ~ data5가 원하는 정렬 방식으로 모두 정렬되있으니까 ListView만 새로고침해줘
+                     *
+                     * */
                     Toast.makeText(getActivity(), text + getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -226,7 +239,7 @@ public class CategoryDetailFragment extends Fragment {
                         sub_String = (String) context.getText(R.string.sub_delivery);
                     }
 
-                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, aver_rank, ds.child("app_img").getValue().toString().trim(),Integer.parseInt(ds.child("download_rank").getValue().toString().trim()),Integer.parseInt(ds.child("korean_use_rank").getValue().toString().trim())));
+                    return_data.add(new CategoryDetailItem(ds.getKey().toString().trim(), sub_String, aver_rank, ds.child("app_img").getValue().toString().trim(), Integer.parseInt(ds.child("download_rank").getValue().toString().trim()), Integer.parseInt(ds.child("korean_use_rank").getValue().toString().trim())));
                 }
 
             }

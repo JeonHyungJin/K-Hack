@@ -273,7 +273,6 @@
                         android:layout_margin="8dp"
                         android:orientation="vertical">
 
-
                         <ImageView
                             android:id="@+id/best_icon2"
                             android:layout_width="90dp"
@@ -281,6 +280,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_margin="5dp"
                             android:src="@mipmap/ic_launcher" />
+
                         <TextView
                             android:id="@+id/best_description2"
                             android:layout_width="match_parent"
@@ -288,6 +288,7 @@
                             android:gravity="center"
                             android:text="배달의 민족"
                             android:textColor="#000000"/>
+
                         <TextView
                             android:id="@+id/best_description2_2"
                             android:layout_width="match_parent"
@@ -361,48 +362,39 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="377dp"
+                    android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp">
+
+                    <ImageView
+                        android:id="@+id/ad_icon1"
+                        android:layout_width="match_parent"
+                        android:layout_height="144dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ic_launcher" />
 
 
-                        <ImageView
-                            android:id="@+id/ad_icon1"
-                            android:layout_width="356dp"
-                            android:layout_height="144dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="5dp"
-                            android:src="@mipmap/ic_launcher" />
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp">
-
-
-                        <ImageView
-                            android:id="@+id/ad_icon2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:src="@mipmap/ic_launcher" />
-
-
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ad_icon2"
+                        android:layout_width="356dp"
+                        android:layout_height="144dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ic_launcher" />
 
                 </LinearLayout>
 

@@ -63,4 +63,9 @@
     <string name="suggest">Suggested Apps</string>
     <string name="best">Best Apps</string>
     <string name="ad">AD</string>
+    <string name="how">Alignment method</string>
+    <string name="sort_korean">the order Koreans use a lot</string>
+    <string name="sort_star">Scoring order</string>
+    <string name="sort_downloda">Downloaded order</string>
+    <string name="change_list">Alignment method has been changed</string>
 </resources>

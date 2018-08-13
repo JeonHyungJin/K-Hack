@@ -1,7 +1,6 @@
 package com.example.qpdjg.all_for.Fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,8 +16,6 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.qpdjg.all_for.Activity.MainActivity;
 import com.example.qpdjg.all_for.Adater.CategoryDetailAdapter;
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryDetailItem;
@@ -31,7 +28,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -81,8 +77,8 @@ public class CategoryDetailFragment extends Fragment {
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 //  String show = getResources().getString(R.string.change_lang);
                 String text = spinner.getSelectedItem().toString();
-                if (text != "정렬방식") {
-                    if (text == "평점순서") {
+                if (text != getResources().getString(R.string.how)) {
+                    if (text == getResources().getString(R.string.sort_star)) {
                         ArrayList temp = new ArrayList();
                         temp.add(data1);
                         temp.add(data2);
@@ -106,7 +102,7 @@ public class CategoryDetailFragment extends Fragment {
                             Collections.reverse((List<?>) temp.get(i));
                         }
                         //평점 순으로 data 1~5 정렬
-                    } else if (text == "한국인들이 많이 쓰는 순서") {
+                    } else if (text == getResources().getString(R.string.sort_korean)) {
                         ArrayList temp = new ArrayList();
                         temp.add(data1);
                         temp.add(data2);
@@ -129,7 +125,7 @@ public class CategoryDetailFragment extends Fragment {
                             });
                         }
                         //한국인이 많이 쓰는 순으로 data 1~5 정렬
-                    } else if (text == "다운로드 많이 받은 순") {
+                    } else if (text == getResources().getString(R.string.sort_downloda)) {
                         ArrayList temp = new ArrayList();
                         temp.add(data1);
                         temp.add(data2);
@@ -161,7 +157,7 @@ public class CategoryDetailFragment extends Fragment {
                     * 여기 부분 까지 오면 data1 ~ data5가 원하는 정렬 방식으로 모두 정렬되있으니까 ListView만 새로고침해줘
                     *
                     * */
-                    Toast.makeText(getActivity(), text + getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getResources().getString(R.string.change_list), Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -170,10 +166,10 @@ public class CategoryDetailFragment extends Fragment {
             }
         });
         ArrayList<String> items = new ArrayList<String>();
-        items.add("정렬방식");
-        items.add("평점순서");
-        items.add("한국인들이 많이 쓰는 순서");
-        items.add("다운로드 많이 받은 순");
+        items.add(getResources().getString(R.string.how));
+        items.add(getResources().getString(R.string.sort_star));
+        items.add(getResources().getString(R.string.sort_korean));
+        items.add(getResources().getString(R.string.sort_downloda));
         ArrayAdapter<String> spiAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
         spinner.setAdapter(spiAdapter);
 

@@ -167,7 +167,6 @@ public class CategoryDetailFragment extends Fragment {
                         categoryDetailAdapter.setData(data4);
                     }
 
-                    Toast.makeText(getActivity(), getResources().getString(R.string.change_list), Toast.LENGTH_SHORT).show();
                 }
             }
 

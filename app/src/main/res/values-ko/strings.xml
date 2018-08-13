@@ -63,4 +63,9 @@
     <string name="suggest">추천어플</string>
     <string name="best">인기어플</string>
     <string name="ad">광고</string>
+    <string name="how">정렬방식</string>
+    <string name="sort_korean">한국인들이 많이 쓰는 순서</string>
+    <string name="sort_star">평점순서</string>
+    <string name="sort_downloda">다운로드 많이 받은 순서</string>
+    <string name="change_list">로 정렬방식이 변경되었습니다</string>
 </resources>

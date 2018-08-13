@@ -63,6 +63,11 @@
     <string name="suggest">推薦アプリケーション</string>
     <string name="best">人気アプリケーション</string>
     <string name="ad">広告</string>
+    <string name="how">整列方式</string>
+    <string name="sort_korean">韓国人がたくさん書き方</string>
+    <string name="sort_star">評点手順</string>
+    <string name="sort_downloda">ダウンロードたくさん受けた手順</string>
+    <string name="change_list">整列方式が変更されました</string>
 </resources>
 
 

@@ -63,6 +63,11 @@
     <string name="suggest">推荐应用程序</string>
     <string name="best">人气应用程序</string>
     <string name="ad">广告</string>
+    <string name="how">排序方式</string>
+    <string name="sort_korean">韩国人常用的顺序</string>
+    <string name="sort_star">评分顺序</string>
+    <string name="sort_downloda">下载次数较多的顺序</string>
+    <string name="change_list">排序方式已变更</string>
 </resources>
 
 

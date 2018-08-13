@@ -68,7 +68,15 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
-            android:background="@color/light_blue"></LinearLayout>
+            android:background="@color/light_blue">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:textColor="#000000"></Spinner>
+        </LinearLayout>
     </LinearLayout>
 
     <ListView

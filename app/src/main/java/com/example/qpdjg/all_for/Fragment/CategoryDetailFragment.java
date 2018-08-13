@@ -1,17 +1,24 @@
 package com.example.qpdjg.all_for.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.qpdjg.all_for.Activity.MainActivity;
 import com.example.qpdjg.all_for.Adater.CategoryDetailAdapter;
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryDetailItem;
@@ -24,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Locale;
 
 public class CategoryDetailFragment extends Fragment {
     String toCall;
@@ -36,6 +43,8 @@ public class CategoryDetailFragment extends Fragment {
     Locale lang;
     ImageView detail_icon;
     String sub_String = null;
+    Spinner spinner;
+    String[] item;
     ArrayList<CategoryDetailItem> data = new ArrayList<CategoryDetailItem>();
 
     ArrayList<CategoryDetailItem>data1= new ArrayList<CategoryDetailItem>();
@@ -60,6 +69,46 @@ public class CategoryDetailFragment extends Fragment {
         detail_explain = (TextView) linearLayout.findViewById(R.id.detail_explain);
         detail_list.setAdapter(categoryDetailAdapter);
 
+
+
+        //spinner 언어 선택
+        spinner = (Spinner) linearLayout.findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                //  String show = getResources().getString(R.string.change_lang);
+                String text = spinner.getSelectedItem().toString();
+                if (text != "정렬방식") {
+                    if (text == "한국어") {
+                        lang = Locale.KOREA;
+                    } else if (text == "English") {
+                        lang = Locale.US;
+                    } else if (text == "中国語") {
+                        lang = Locale.CHINA;
+                    } else if (text == "日本語") {
+                        lang = Locale.JAPAN;
+                    }
+                    Configuration config = new Configuration();
+                    config.locale = lang;
+                    getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
+                    Toast.makeText(getActivity(), text + getResources().getString(R.string.change_lang), Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+        });
+        ArrayList<String> items = new ArrayList<String>();
+        items.add("정렬방식");
+        items.add("평점순서");
+        items.add("한국인들이 쓰는 순서");
+        items.add("다운로드 많이 받은 순");
+        ArrayAdapter<String> spiAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, items);
+        spinner.setAdapter(spiAdapter);
 
         return linearLayout;
     }

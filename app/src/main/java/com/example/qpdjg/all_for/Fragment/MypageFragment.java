@@ -185,7 +185,6 @@ public class MypageFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
-
         ArrayList<String> items = new ArrayList<String>();
         items.add("Language");
         items.add("English");

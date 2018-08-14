@@ -114,7 +114,6 @@ public class ViewAppFragment extends Fragment {
                 String strLanguage = systemLocale.getLanguage();
 
 
-               // System.out.println("우ㅏ우아ㅜ아ㅜ아우ㅏㅜ아ㅜ아아"+strLanguage);
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     if (appCall.equals(ds.getKey().toString())) {
                         name = ds.getKey();

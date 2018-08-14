@@ -107,13 +107,12 @@ public class ViewAppFragment extends Fragment {
 
                         downloadUrl = ds.child("download_url").getValue().toString().trim();
 
-                        if (strLanguage == "en") {
-                            for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
-                                urlArray.add(ds3.getValue().toString().trim());
-                            }
-                        }
                         if (strLanguage == "zh") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("chienese_img").getChildren()) {
+                                urlArray.add(ds3.getValue().toString().trim());
+                            }
+                        }else{
+                            for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
                         }

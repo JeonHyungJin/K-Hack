@@ -68,6 +68,7 @@
     <string name="sort_star">評点手順</string>
     <string name="sort_downloda">ダウンロードたくさん受けた手順</string>
     <string name="change_list">整列方式が変更されました</string>
+    <string name="comments_done">コメントの作成が完了しました。</string>
 </resources>
 
 

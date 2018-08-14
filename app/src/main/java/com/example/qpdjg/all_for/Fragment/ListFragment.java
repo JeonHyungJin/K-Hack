@@ -86,6 +86,7 @@ public class ListFragment extends Fragment {
                     int index = name.indexOf("@");
                     String save_email = name.substring(0,index);
                     app_final.child(save_email+text.toString().trim()).setValue(comment);
+                    Toast.makeText(getActivity(), R.string.comments_done, Toast.LENGTH_SHORT).show();
 
                 }
             }

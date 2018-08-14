@@ -68,6 +68,7 @@
     <string name="sort_star">评分顺序</string>
     <string name="sort_downloda">下载次数较多的顺序</string>
     <string name="change_list">排序方式已变更</string>
+    <string name="comments_done">留言已完成。</string>
 </resources>
 
 

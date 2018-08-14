@@ -25,6 +25,7 @@ public class ListFragment extends Fragment {
     EditText editText;
     LinearLayout commentBtn;
     NoScrollBarListview  noScrollBarListview;
+    ArrayList<CommentItem> comemnts = new ArrayList<CommentItem>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_content, container, false);
-        commentAdapter = new CommentAdapter(getContext(),R.layout.item_comment,null);
+        commentAdapter = new CommentAdapter(getContext(),R.layout.item_comment,comemnts);
         imageViewer = (ImageViewer)linearLayout.findViewById(R.id.contentImageViewer);
 
         editText = (EditText)linearLayout.findViewById(R.id.contentEdittext);

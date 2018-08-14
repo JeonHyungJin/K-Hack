@@ -66,7 +66,7 @@ public class CommentAdapter extends BaseAdapter {
         comment.setText(data.get(i).getText());
 
 
-        for(int j =0; i< data.get(i).getRank(); ++j){
+        for(int j =0; j< data.get(i).getRank(); ++j){
             star[j].setBackground(ContextCompat.getDrawable(context,R.drawable.star_full));
         }
 

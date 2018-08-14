@@ -22,17 +22,23 @@ public class CategoryDetailAdapter extends BaseAdapter {
     private int layout;
     Context context;
     CustomViewPager viewPager;
+    String category;
 
-    public CategoryDetailAdapter(Context context, int layout, ArrayList<CategoryDetailItem> data, CustomViewPager viewPager){
+    public CategoryDetailAdapter(Context context, int layout, ArrayList<CategoryDetailItem> data, CustomViewPager viewPager) {
         this.context = context;
-        this.inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        this.data=data;
-        this.layout=layout;
-        this.viewPager =viewPager;
+        this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.data = data;
+        this.layout = layout;
+        this.viewPager = viewPager;
     }
+
     @Override
     public int getCount() {
         return data.size();
+    }
+
+    public void setcategory(String category) {
+        this.category = category;
     }
 
     @Override
@@ -47,10 +53,10 @@ public class CategoryDetailAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
-        if(convertView==null) {
+        if (convertView == null) {
             convertView = inflater.inflate(layout, viewGroup, false);
         }
-        ImageView stars[]= new ImageView[5];
+        ImageView stars[] = new ImageView[5];
 
         ImageView icon = convertView.findViewById(R.id.detail_item_icon);
         TextView name = convertView.findViewById(R.id.detail_item_name);
@@ -66,18 +72,19 @@ public class CategoryDetailAdapter extends BaseAdapter {
         name.setText(data.get(i).getAppname());
         subname.setText(data.get(i).getSubname());
 
-        int rank=data.get(i).getRank();
-        for(int j =0; j <rank; ++j){
-            stars[j].setBackground(ContextCompat.getDrawable(context,R.drawable.star_full));
+        int rank = data.get(i).getRank();
+        for (int j = 0; j < rank; ++j) {
+            stars[j].setBackground(ContextCompat.getDrawable(context, R.drawable.star_full));
         }
 
 
-        final String  toAppCall = data.get(i).getAppname();
+        final String toAppCall = data.get(i).getAppname();
+        //final String toCategoryCall =
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 viewPager.setCurrentItem(4);
-                viewPager.getViewpagerAdapter().setAppCall(toAppCall);
+                viewPager.getViewpagerAdapter().setAppCall(toAppCall,category);
             }
         });
         return convertView;

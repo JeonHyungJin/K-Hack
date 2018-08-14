@@ -88,6 +88,7 @@ public class ListFragment extends Fragment {
                     app_final.child(save_email+text.toString().trim()).setValue(comment);
                     Toast.makeText(getActivity(), R.string.comments_done, Toast.LENGTH_SHORT).show();
                     editText.setText("");
+                    starBar.setStar(0);
                 }
             }
         });

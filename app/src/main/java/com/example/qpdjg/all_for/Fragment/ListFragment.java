@@ -2,6 +2,8 @@ package com.example.qpdjg.all_for.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.NestedScrollView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +35,7 @@ public class ListFragment extends Fragment {
     LinearLayout commentBtn;
     NoScrollBarListview noScrollBarListview;
     ArrayList<CommentItem> comemnts = new ArrayList<CommentItem>();
+    NestedScrollView nestedScrollView;
     private FirebaseAuth firebaseAuth;
     StarBar starBar;
     private DatabaseReference mDatabase;
@@ -54,7 +57,9 @@ public class ListFragment extends Fragment {
         editText = (EditText) linearLayout.findViewById(R.id.contentEdittext);
         commentBtn = (LinearLayout) linearLayout.findViewById(R.id.contentComment);
         noScrollBarListview = (NoScrollBarListview) linearLayout.findViewById(R.id.contentCommentView);
+        nestedScrollView = (NestedScrollView)linearLayout.findViewById(R.id.contentNested);
 
+        commentAdapter.setNoScrollBarListview(noScrollBarListview);
         noScrollBarListview.setAdapter(commentAdapter);
 
         commentBtn.setOnClickListener(new View.OnClickListener() {
@@ -114,5 +119,15 @@ public class ListFragment extends Fragment {
     public void setData(ArrayList<String> url, ArrayList<CommentItem> data) {
         imageViewer.setUrl(url);
         commentAdapter.setData(data);
+        imageViewer.setFocusableInTouchMode(true);
+        imageViewer.requestFocus();
+//        nestedScrollView.fullScroll(View.FOCUS_UP);
+//        editText.clearFocus();
+//        nestedScrollView.scrollTo(0,0);
+
+
     }
+
+
+
 }

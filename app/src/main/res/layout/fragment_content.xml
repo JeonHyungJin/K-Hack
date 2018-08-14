@@ -5,16 +5,21 @@
     android:orientation="vertical">
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/contentNested"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fadingEdge="none"
         android:overScrollMode="never"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        android:fillViewport="true"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
             <TextView
                 android:layout_width="match_parent"
@@ -150,13 +155,14 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
                 android:background="@color/light_blue" />
-
             <com.example.qpdjg.all_for.Util.NoScrollBarListview
                 android:id="@+id/contentCommentView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
             </com.example.qpdjg.all_for.Util.NoScrollBarListview>
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

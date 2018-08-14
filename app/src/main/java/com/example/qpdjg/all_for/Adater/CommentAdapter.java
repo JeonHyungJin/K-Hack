@@ -2,17 +2,20 @@ package com.example.qpdjg.all_for.Adater;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Item.CategoryItem;
 import com.example.qpdjg.all_for.Item.CommentItem;
 import com.example.qpdjg.all_for.R;
+import com.example.qpdjg.all_for.Util.NoScrollBarListview;
 
 import java.util.ArrayList;
 
@@ -20,6 +23,7 @@ public class CommentAdapter extends BaseAdapter {
     private LayoutInflater inflater;
     private ArrayList<CommentItem> data;
     private int layout;
+    NoScrollBarListview noScrollBarListview;
     Context context;
 
 
@@ -76,6 +80,19 @@ public class CommentAdapter extends BaseAdapter {
 
     public void setData(ArrayList<CommentItem> data) {
         this.data = data;
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(100*data.size()));
+        noScrollBarListview.setLayoutParams(params);
         notifyDataSetChanged();
+
+    }
+
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
+
+    public void setNoScrollBarListview(NoScrollBarListview noScrollBarListview) {
+        this.noScrollBarListview = noScrollBarListview;
     }
 }

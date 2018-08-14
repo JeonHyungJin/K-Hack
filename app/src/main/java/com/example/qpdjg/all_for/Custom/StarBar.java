@@ -73,7 +73,7 @@ public class StarBar extends LinearLayout {
         });
     }
 
-    private void setStar(int count){
+    public void setStar(int count){
         for(int i =0; i< count; ++i){
             star[i].setBackground(ContextCompat.getDrawable(getContext(),R.drawable.star_full));
 

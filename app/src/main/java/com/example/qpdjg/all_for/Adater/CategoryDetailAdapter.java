@@ -23,7 +23,7 @@ public class CategoryDetailAdapter extends BaseAdapter {
     Context context;
     CustomViewPager viewPager;
     String category;
-
+   // MypageFragment my = new MypageFragment();
     public CategoryDetailAdapter(Context context, int layout, ArrayList<CategoryDetailItem> data, CustomViewPager viewPager) {
         this.context = context;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

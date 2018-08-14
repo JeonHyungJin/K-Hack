@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.MotionEvent;
 
 import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.Fragment.CategoryDetailFragment;
@@ -70,7 +69,8 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     public void setToCall(String toCall){
         categoryDetailFragment.setToCall(toCall);
     }
-    public void  setAppCall(String appCall,String category){viewAppFragment.setAppCall(appCall,category);}
+    public void  setAppCall(String appCall,String category){
+        viewAppFragment.setAppCall(appCall,category);}
 
 }
 

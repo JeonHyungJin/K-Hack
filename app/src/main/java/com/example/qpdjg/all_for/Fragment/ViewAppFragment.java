@@ -1,6 +1,7 @@
 package com.example.qpdjg.all_for.Fragment;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -27,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ViewAppFragment extends Fragment {
     String appCall;
@@ -35,6 +37,7 @@ public class ViewAppFragment extends Fragment {
     TextView appname;
     ImageView icon;
     LinearLayout download;
+    //Locale lang;
 
     String name;
     String url;
@@ -92,6 +95,8 @@ public class ViewAppFragment extends Fragment {
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //Configuration config = new Configuration();
+                //config.locale = lang;
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     if (appCall.equals(ds.getKey().toString())) {
                         name = ds.getKey();
@@ -99,9 +104,17 @@ public class ViewAppFragment extends Fragment {
 
                         downloadUrl = ds.child("download_url").getValue().toString().trim();
 
-                        for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
-                            urlArray.add(ds3.getValue().toString().trim());
+                       // if (언어 == 영어) {
+                            for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
+                                urlArray.add(ds3.getValue().toString().trim());
+                            }
+                       // }
+                        /*if (언어 == 중국어) {
+                            for (DataSnapshot ds3 : ds.child("explain_img").child("chienese_img").getChildren()) {
+                                urlArray.add(ds3.getValue().toString().trim());
+                            }
                         }
+*/
                         int aver_rank = 0;
                         int comments_size = 0;
 
@@ -124,12 +137,12 @@ public class ViewAppFragment extends Fragment {
                 fragment2.setData(urlArray, comment);
                 setViews();
             }
+
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) { }
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
         };
-        System.out.println("오ㅏ라와라");
         real_apps_Ref.addListenerForSingleValueEvent(valueEventListener);
-        System.out.print("진짜로ㅑ");
 
 //        String형 name/////////////////
 //        String형  url///////////////
@@ -139,8 +152,8 @@ public class ViewAppFragment extends Fragment {
         // ArrayList<CommentItem> comment 코멘트 어레이//////////
         //설정 바람
 
-      //  fragment2.setData(urlArray, comment);
-     //   setViews();
+        //  fragment2.setData(urlArray, comment);
+        //   setViews();
     }
 
     private void setViews() {

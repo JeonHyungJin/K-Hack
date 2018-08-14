@@ -132,7 +132,7 @@ public class ViewAppFragment extends Fragment {
                         rank = aver_rank;
                     }
                 }
-
+                System.out.println("여기인가요"+comment.size());
                 fragment2.setData(urlArray, comment);
                 setViews();
             }

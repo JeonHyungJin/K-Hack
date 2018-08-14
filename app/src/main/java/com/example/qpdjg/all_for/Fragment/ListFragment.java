@@ -76,16 +76,16 @@ public class ListFragment extends Fragment {
                     count++;
                     comemnts.add(new CommentItem(text,date,name,rank));
                     CommentItem comment = new CommentItem(rank,date,name,text);
-                         System.out.println("안뇨오오오오오옹"+Category);
-                         System.out.println("안뇨오오오오오옹2222"+Appcall);
                     DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
                     DatabaseReference category_Ref = rootRef.child("app_category");
                     DatabaseReference delivery_Ref = category_Ref.child(Category);
                     DatabaseReference delivery_apps_Ref = delivery_Ref.child("apps");
-                    DatabaseReference delivery_apps_Ref_what = delivery_apps_Ref.child("hi");
+                    String APP_Name = Appcall;
+                    DatabaseReference delivery_apps_Ref_what = delivery_apps_Ref.child(Appcall.toString().trim());
                     DatabaseReference app_final = delivery_apps_Ref_what.child("comments");
-                    System.out.println("aaaaaaaaaa"+app_final);
-                   // app_final.child(name.toString().trim()+text.toString().trim()).setValue(comment);
+                    int index = name.indexOf("@");
+                    String save_email = name.substring(0,index);
+                    app_final.child(save_email+text.toString().trim()).setValue(comment);
 
                 }
             }
@@ -95,7 +95,7 @@ public class ListFragment extends Fragment {
     }
 
     public void get_now(String appcall,String category){
-        this.Category =category;
+        this.Category = category;
         this.Appcall = appcall;
     }
 

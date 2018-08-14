@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             <TextView
                 android:id="@+id/menu_homeTxt"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/home"
                 android:textSize="13dp"
@@ -53,7 +53,7 @@
             <TextView
                 android:id="@+id/menu_catagoryTxt"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/catagory"
                 android:textSize="13dp"
@@ -76,7 +76,7 @@
             <TextView
                 android:id="@+id/menu_mypageTxt"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/mypage"
                 android:textSize="13dp"

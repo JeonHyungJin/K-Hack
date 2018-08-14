@@ -1,7 +1,6 @@
 package com.example.qpdjg.all_for.Custom;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.qpdjg.all_for.Activity.ImageActivity;
 import com.example.qpdjg.all_for.R;
 
 public class StarBar extends LinearLayout {
@@ -78,10 +76,12 @@ public class StarBar extends LinearLayout {
     private void setStar(int count){
         for(int i =0; i< count; ++i){
             star[i].setBackground(ContextCompat.getDrawable(getContext(),R.drawable.star_full));
+
         }
         for(int i = count; i< 5; ++i){
             star[i].setBackground(ContextCompat.getDrawable(getContext(),R.drawable.blank));
         }
+        starCount = count;
     }
 
     public int getStar() {

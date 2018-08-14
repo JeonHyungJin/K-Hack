@@ -72,6 +72,7 @@ public class ImageViewer extends LinearLayout {
     public void setUrl(ArrayList<String> url) {
         this.url = url;
         now = 0;
+        Glide.with(getContext()).load(url.get(now)).into(viewer);
     }
 
     private void nextImage(){

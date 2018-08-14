@@ -6,6 +6,13 @@ public class CommentItem {
     String name;
     String text;
 
+    public CommentItem(int rank, String date, String name, String text) {
+        this.rank = rank;
+        this.date = date;
+        this.name = name;
+        this.text = text;
+    }
+
     public int getRank() {
         return rank;
     }

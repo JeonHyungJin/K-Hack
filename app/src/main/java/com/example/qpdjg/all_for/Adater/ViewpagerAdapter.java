@@ -70,7 +70,7 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
     public void setToCall(String toCall){
         categoryDetailFragment.setToCall(toCall);
     }
-    public void  setAppCall(String appCall){viewAppFragment.setAppCall(appCall);}
+    public void  setAppCall(String appCall,String category){viewAppFragment.setAppCall(appCall,category);}
 
 }
 

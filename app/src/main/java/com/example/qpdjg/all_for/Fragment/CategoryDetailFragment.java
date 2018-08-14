@@ -275,6 +275,7 @@ public class CategoryDetailFragment extends Fragment {
         detail.setText("Transport");
         detail_icon.setImageResource(R.drawable.transport_black);
         categoryDetailAdapter.setData(data1);
+        categoryDetailAdapter.setcategory("transport");
         detail_explain.setText(getText(R.string.introduceTrans));
     }
 
@@ -282,6 +283,7 @@ public class CategoryDetailFragment extends Fragment {
         detail.setText("Restaurant");
         detail_icon.setImageResource(R.drawable.restaurant_black);
         categoryDetailAdapter.setData(data2);
+        categoryDetailAdapter.setcategory("restaurant");
         detail_explain.setText(getText(R.string.introduceRest));
     }
 
@@ -289,6 +291,7 @@ public class CategoryDetailFragment extends Fragment {
         detail.setText("Food Delivery");
         detail_icon.setImageResource(R.drawable.food_delivery_black);
         categoryDetailAdapter.setData(data3);
+        categoryDetailAdapter.setcategory("delivery");
         detail_explain.setText(getText(R.string.introduceDeli));
 
     }
@@ -297,6 +300,7 @@ public class CategoryDetailFragment extends Fragment {
         detail.setText("Real Property");
         detail_icon.setImageResource(R.drawable.house_black);
         categoryDetailAdapter.setData(data5);
+        categoryDetailAdapter.setcategory("realstate");
         detail_explain.setText(getText(R.string.introducePro));
     }
 
@@ -304,6 +308,7 @@ public class CategoryDetailFragment extends Fragment {
         detail.setText("Travel");
         detail_icon.setImageResource(R.drawable.travel_black);
         categoryDetailAdapter.setData(data4);
+        categoryDetailAdapter.setcategory("tour");
         detail_explain.setText(getText(R.string.introduceTravel));
     }
 

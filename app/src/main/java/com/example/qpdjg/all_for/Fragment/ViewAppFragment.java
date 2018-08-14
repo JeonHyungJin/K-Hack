@@ -25,8 +25,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -86,6 +84,7 @@ public class ViewAppFragment extends Fragment {
         this.appCall = appCall;
         this.category = category;
 
+        fragment2.get_now(appCall,category);
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference app_Ref = rootRef.child("app_category");
         DatabaseReference category_Ref = app_Ref.child(category);
@@ -119,7 +118,7 @@ public class ViewAppFragment extends Fragment {
                         int comments_size = 0;
 
                         for (DataSnapshot ds2 : ds.child("comments").getChildren()) {
-                            CommentItem temp_comment = new CommentItem(Integer.parseInt(ds2.child("rank").getValue().toString().trim()), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("contents").getValue().toString().trim());
+                            CommentItem temp_comment = new CommentItem(ds2.child("rank").getValue().toString().trim(), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("contents").getValue().toString().trim());
                             comment.add(temp_comment);
 
                             aver_rank += Integer.parseInt(ds2.child("rank").getValue().toString().trim());

@@ -1,20 +1,20 @@
 package com.example.qpdjg.all_for.Item;
 
 public class CommentItem {
-    int rank;
+    String rank;
     String date;
     String name;
-    String text;
+    String contents;
 
-    public CommentItem(int rank, String date, String name, String text) {
+    public CommentItem(String rank, String date, String name, String text) {
         this.rank = rank;
         this.date = date;
         this.name = name;
-        this.text = text;
+        this.contents = text;
     }
 
     public int getRank() {
-        return rank;
+        return Integer.parseInt(rank);
     }
 
     public String getDate() {
@@ -26,6 +26,6 @@ public class CommentItem {
     }
 
     public String getText() {
-        return text;
+        return contents;
     }
 }

@@ -1,7 +1,6 @@
 package com.example.qpdjg.all_for.Fragment;
 
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -35,8 +34,8 @@ public class ViewAppFragment extends Fragment {
     TextView appname;
     ImageView icon;
     LinearLayout download;
-    //Locale lang;
-
+    Locale lang;
+    String text;
     String name;
     String url;
     String downloadUrl;
@@ -44,7 +43,7 @@ public class ViewAppFragment extends Fragment {
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
     ListFragment fragment2 = new ListFragment();
-
+  //  MypageFragment my = new MypageFragment();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +79,23 @@ public class ViewAppFragment extends Fragment {
         return linearLayout;
     }
 
+
+    public void set_lang(String text) {
+        this.text = text;
+        if (text != "Language") {
+            if (text == "한국어") {
+                this.lang = Locale.KOREA;
+            } else if (text == "English") {
+                this.lang = Locale.US;
+            } else if (text == "中国語") {
+                this.lang = Locale.CHINA;
+            } else if (text == "日本語") {
+                this.lang = Locale.JAPAN;
+            }
+        }
+    }
+
+
     public void setAppCall(final String appCall, String category) {
         this.appCall = appCall;
         this.category = category;
@@ -94,8 +110,11 @@ public class ViewAppFragment extends Fragment {
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //Configuration config = new Configuration();
-                //config.locale = lang;
+                Locale systemLocale = getResources().getConfiguration().locale;
+                String strLanguage = systemLocale.getLanguage();
+
+
+               // System.out.println("우ㅏ우아ㅜ아ㅜ아우ㅏㅜ아ㅜ아아"+strLanguage);
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     if (appCall.equals(ds.getKey().toString())) {
                         name = ds.getKey();
@@ -103,17 +122,17 @@ public class ViewAppFragment extends Fragment {
 
                         downloadUrl = ds.child("download_url").getValue().toString().trim();
 
-                       // if (언어 == 영어) {
+                        if (strLanguage == "en") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
-                       // }
-                        /*if (언어 == 중국어) {
+                        }
+                        if (strLanguage == "zh") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("chienese_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
                         }
-*/
+
                         int aver_rank = 0;
                         int comments_size = 0;
 
@@ -154,6 +173,7 @@ public class ViewAppFragment extends Fragment {
         //  fragment2.setData(urlArray, comment);
         //   setViews();
     }
+
 
     private void setViews() {
         appname.setText(name);

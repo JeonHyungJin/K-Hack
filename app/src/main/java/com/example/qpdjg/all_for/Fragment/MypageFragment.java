@@ -46,7 +46,9 @@ public class MypageFragment extends Fragment {
     private DatabaseReference mReference = database.getReference();
     Spinner spinner;
     String[] item;
-    Locale lang;
+    public Locale lang;
+    ViewAppFragment view = new ViewAppFragment();
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -173,6 +175,7 @@ public class MypageFragment extends Fragment {
                     }
                     Configuration config = new Configuration();
                     config.locale = lang;
+                    view.set_lang(text);
                     getResources().updateConfiguration(config, getResources().getDisplayMetrics());
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent);

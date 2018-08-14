@@ -69,4 +69,9 @@
     <string name="sort_downloda">Downloaded order</string>
     <string name="change_list">Alignment method has been changed</string>
     <string name="comments_done">Comment creation completed.</string>
+    <string name="introduce">Introduction</string>
+    <string name="review">Review</string>
+    <string name="register">Register</string>
+    <string name="comment_section">Comments</string>
+    <string name="download">Download</string>
 </resources>

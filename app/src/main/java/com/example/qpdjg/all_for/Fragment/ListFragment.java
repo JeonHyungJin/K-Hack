@@ -58,9 +58,8 @@ public class ListFragment extends Fragment {
         noScrollBarListview = (NoScrollBarListview) linearLayout.findViewById(R.id.contentCommentView);
         nestedScrollView = (NestedScrollView)linearLayout.findViewById(R.id.contentNested);
 
-<<<<<<< HEAD
         commentAdapter.setNoScrollBarListview(noScrollBarListview);
-=======
+
         TextView translated = linearLayout.findViewById(R.id.translated);
         TextView Review = linearLayout.findViewById(R.id.Review);
         TextView introduce =linearLayout.findViewById(R.id.Introduce);
@@ -87,8 +86,6 @@ public class ListFragment extends Fragment {
             download_section.setText(R.string.download);
         }
 
-
->>>>>>> de655b66fe217e75ed46017168f2a071778584c1
         noScrollBarListview.setAdapter(commentAdapter);
 
         commentBtn.setOnClickListener(new View.OnClickListener() {

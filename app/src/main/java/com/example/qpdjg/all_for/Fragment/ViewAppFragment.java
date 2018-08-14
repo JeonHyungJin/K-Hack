@@ -35,7 +35,6 @@ public class ViewAppFragment extends Fragment {
     ImageView icon;
     LinearLayout download;
     Locale lang;
-    String text;
     String name;
     String url;
     String downloadUrl;
@@ -80,20 +79,7 @@ public class ViewAppFragment extends Fragment {
     }
 
 
-    public void set_lang(String text) {
-        this.text = text;
-        if (text != "Language") {
-            if (text == "한국어") {
-                this.lang = Locale.KOREA;
-            } else if (text == "English") {
-                this.lang = Locale.US;
-            } else if (text == "中国語") {
-                this.lang = Locale.CHINA;
-            } else if (text == "日本語") {
-                this.lang = Locale.JAPAN;
-            }
-        }
-    }
+
 
 
     public void setAppCall(final String appCall, String category) {

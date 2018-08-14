@@ -74,7 +74,7 @@ public class ListFragment extends Fragment {
                     int howstar = starBar.getStar();
                     String rank = String.valueOf(howstar);
                     count++;
-                    comemnts.add(new CommentItem(text,date,name,rank));
+                    comemnts.add(new CommentItem(rank,date,name,text));
                     CommentItem comment = new CommentItem(rank,date,name,text);
                     DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
                     DatabaseReference category_Ref = rootRef.child("app_category");

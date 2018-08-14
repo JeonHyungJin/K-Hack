@@ -36,10 +36,8 @@ public class ListFragment extends Fragment {
     private FirebaseAuth firebaseAuth;
     StarBar starBar;
     private DatabaseReference mDatabase;
-//    ViewAppFragment viewAppFragment = new ViewAppFragment();
     String Category;
     String Appcall;
-    int count = 1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +71,6 @@ public class ListFragment extends Fragment {
                     String name = user.getEmail();
                     int howstar = starBar.getStar();
                     String rank = String.valueOf(howstar);
-                    count++;
                     comemnts.add(new CommentItem(rank,date,name,text));
                     CommentItem comment = new CommentItem(rank,date,name,text);
                     DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();

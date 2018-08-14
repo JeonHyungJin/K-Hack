@@ -42,7 +42,6 @@ public class ViewAppFragment extends Fragment {
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
     ListFragment fragment2 = new ListFragment();
-  //  MypageFragment my = new MypageFragment();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -69,4 +69,10 @@
     <string name="sort_downloda">다운로드 많이 받은 순서</string>
     <string name="change_list">로 정렬방식이 변경되었습니다</string>
     <string name="comments_done">댓글 작성이 완료되었습니다.</string>
+    <string name="translated">번역 된 부분</string>
+    <string name="introduce">소개</string>
+    <string name="review">리뷰</string>
+    <string name="register">등록하기</string>
+    <string name="comment_section">댓글</string>
+    <string name="download">다운로드</string>
 </resources>

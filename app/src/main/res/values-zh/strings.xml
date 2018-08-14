@@ -69,6 +69,11 @@
     <string name="sort_downloda">下载次数较多的顺序</string>
     <string name="change_list">排序方式已变更</string>
     <string name="comments_done">留言已完成。</string>
+    <string name="introduce">简介</string>
+    <string name="review">评论</string>
+    <string name="register">登记。</string>
+    <string name="comment_section">回帖</string>
+    <string name="download">下载</string>
 </resources>
 
 

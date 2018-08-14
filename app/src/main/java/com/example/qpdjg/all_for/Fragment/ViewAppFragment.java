@@ -42,7 +42,6 @@ public class ViewAppFragment extends Fragment {
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
     ListFragment fragment2 = new ListFragment();
-  //  MypageFragment my = new MypageFragment();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +50,34 @@ public class ViewAppFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_appview, container, false);
+
+
+        TextView translated = linearLayout.findViewById(R.id.translated);
+        TextView Review = linearLayout.findViewById(R.id.Review);
+        TextView introduce =linearLayout.findViewById(R.id.Introduce);
+        TextView regis = linearLayout.findViewById(R.id.register);
+        TextView comment_section = linearLayout.findViewById(R.id.comment_section);
+        TextView download_section = linearLayout.findViewById(R.id.download_button);
+
+        if(translated != null){
+            translated.setText(R.string.translated);
+        }
+        if(Review != null){
+            Review.setText(R.string.review);
+        }
+        if(introduce != null){
+            introduce.setText(R.string.introduce);
+        }
+        if(regis != null){
+            regis.setText(R.string.register);
+        }
+        if(comment_section != null) {
+            comment_section.setText(R.string.comment_section);
+        }
+        if(download_section != null) {
+            download_section.setText(R.string.download);
+        }
+
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -81,8 +108,9 @@ public class ViewAppFragment extends Fragment {
 
 
 
-
     public void setAppCall(final String appCall, String category) {
+
+
         this.appCall = appCall;
         this.category = category;
 

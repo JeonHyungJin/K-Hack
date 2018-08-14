@@ -47,8 +47,6 @@ public class MypageFragment extends Fragment {
     Spinner spinner;
     String[] item;
     public Locale lang;
-    ViewAppFragment view = new ViewAppFragment();
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

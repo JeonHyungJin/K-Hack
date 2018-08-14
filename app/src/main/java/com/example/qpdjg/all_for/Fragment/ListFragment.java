@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qpdjg.all_for.Adater.CommentAdapter;
@@ -39,10 +40,8 @@ public class ListFragment extends Fragment {
     private FirebaseAuth firebaseAuth;
     StarBar starBar;
     private DatabaseReference mDatabase;
-//    ViewAppFragment viewAppFragment = new ViewAppFragment();
     String Category;
     String Appcall;
-    int count = 1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +58,37 @@ public class ListFragment extends Fragment {
         noScrollBarListview = (NoScrollBarListview) linearLayout.findViewById(R.id.contentCommentView);
         nestedScrollView = (NestedScrollView)linearLayout.findViewById(R.id.contentNested);
 
+<<<<<<< HEAD
         commentAdapter.setNoScrollBarListview(noScrollBarListview);
+=======
+        TextView translated = linearLayout.findViewById(R.id.translated);
+        TextView Review = linearLayout.findViewById(R.id.Review);
+        TextView introduce =linearLayout.findViewById(R.id.Introduce);
+        TextView regis = linearLayout.findViewById(R.id.register);
+        TextView comment_section = linearLayout.findViewById(R.id.comment_section);
+        TextView download_section = linearLayout.findViewById(R.id.download_button);
+
+        if(translated != null){
+            translated.setText(R.string.translated);
+        }
+        if(Review != null){
+            Review.setText(R.string.review);
+        }
+        if(introduce != null){
+            introduce.setText(R.string.introduce);
+        }
+        if(regis != null){
+            regis.setText(R.string.register);
+        }
+        if(comment_section != null) {
+            comment_section.setText(R.string.comment_section);
+        }
+        if(download_section != null) {
+            download_section.setText(R.string.download);
+        }
+
+
+>>>>>>> de655b66fe217e75ed46017168f2a071778584c1
         noScrollBarListview.setAdapter(commentAdapter);
 
         commentBtn.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +107,6 @@ public class ListFragment extends Fragment {
                     String name = user.getEmail();
                     int howstar = starBar.getStar();
                     String rank = String.valueOf(howstar);
-                    count++;
                     comemnts.add(new CommentItem(rank,date,name,text));
                     CommentItem comment = new CommentItem(rank,date,name,text);
                     DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();

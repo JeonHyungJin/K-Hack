@@ -22,9 +22,10 @@
             android:focusableInTouchMode="true">
 
             <TextView
+                android:id="@+id/translated"
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
-                android:text="Translated Scene"
+                android:text="ㅁㅁㅁㅁ"
                 android:textColor="@color/light_blue"
                 android:textSize="18dp" />
 
@@ -42,6 +43,7 @@
             </com.example.qpdjg.all_for.Custom.ImageViewer>
 
             <TextView
+                android:id="@+id/Introduce"
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:layout_marginTop="10dp"
@@ -76,6 +78,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/Review"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="Review"
@@ -133,6 +136,7 @@
                     android:gravity="center">
 
                     <TextView
+                        android:id="@+id/register"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Comment"
@@ -143,6 +147,7 @@
 
 
             <TextView
+                android:id="@+id/comment_section"
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
                 android:layout_marginTop="10dp"

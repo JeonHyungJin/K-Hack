@@ -69,6 +69,11 @@
     <string name="sort_downloda">ダウンロードたくさん受けた手順</string>
     <string name="change_list">整列方式が変更されました</string>
     <string name="comments_done">コメントの作成が完了しました。</string>
+    <string name="introduce">紹介</string>
+    <string name="review">レビュー</string>
+    <string name="register">登録する</string>
+    <string name="comment_section">コメント</string>
+    <string name="download">ダウンロード</string>
 </resources>
 
 

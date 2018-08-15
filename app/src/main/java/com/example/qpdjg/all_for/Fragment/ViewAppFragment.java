@@ -130,6 +130,9 @@ public class ViewAppFragment extends Fragment {
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     if (appCall.equals(ds.getKey().toString())) {
+                        comment.clear();
+                        urlArray.clear();
+
                         name = ds.getKey();
                         url = ds.child("app_img").getValue().toString().trim();
 

@@ -27,8 +27,9 @@ public class ViewpagerAdapter extends FragmentPagerAdapter {
 
     public ViewpagerAdapter(FragmentManager fm, int max, CustomViewPager viewPager, Context context) {
         super(fm);
-        MAX_PAGE =max;
+        MAX_PAGE = max;
         this.viewPager = viewPager;
+        mainFragment.setViewPager(viewPager);
         categoryFragment.setViewPager(viewPager);
         categoryDetailFragment.setViewPager(viewPager);
         categoryDetailFragment.dataRefresh(context);

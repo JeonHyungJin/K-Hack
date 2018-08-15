@@ -142,6 +142,10 @@ public class ViewAppFragment extends Fragment {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("chienese_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
+                        }else if (strLanguage == "ja") {
+                            for (DataSnapshot ds3 : ds.child("explain_img").child("japan_img").getChildren()) {
+                                urlArray.add(ds3.getValue().toString().trim());
+                            }
                         }else{
                             for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());

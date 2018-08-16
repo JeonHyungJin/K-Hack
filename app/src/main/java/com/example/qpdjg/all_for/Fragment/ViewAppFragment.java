@@ -182,7 +182,7 @@ public class ViewAppFragment extends Fragment {
                     }
                 }
                 System.out.println("여기인가요"+comment.size());
-                fragment2.setData(urlArray, comment);
+                fragment2.setData(urlArray, comment,app_introduction,other_lan);
                 setViews();
             }
 

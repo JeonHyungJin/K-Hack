@@ -41,6 +41,9 @@ public class ListFragment extends Fragment {
     private DatabaseReference mDatabase;
     String Category;
     String Appcall;
+    TextView langs;
+    TextView introduces;
+    TextView translated;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,10 +59,12 @@ public class ListFragment extends Fragment {
         commentBtn = (LinearLayout) linearLayout.findViewById(R.id.contentComment);
         noScrollBarListview = (NoScrollBarListview) linearLayout.findViewById(R.id.contentCommentView);
         nestedScrollView = (NestedScrollView)linearLayout.findViewById(R.id.contentNested);
+        introduces = (TextView)linearLayout.findViewById(R.id.contentIntroduce);
+        langs = (TextView)linearLayout.findViewById(R.id.contentLang);
 
         commentAdapter.setNoScrollBarListview(noScrollBarListview);
 
-        TextView translated = linearLayout.findViewById(R.id.translated);
+        translated = linearLayout.findViewById(R.id.translated);
         TextView Review = linearLayout.findViewById(R.id.Review);
         TextView introduce =linearLayout.findViewById(R.id.Introduce);
         TextView regis = linearLayout.findViewById(R.id.register);
@@ -140,11 +145,13 @@ public class ListFragment extends Fragment {
     }
 
 
-    public void setData(ArrayList<String> url, ArrayList<CommentItem> data) {
+    public void setData(ArrayList<String> url, ArrayList<CommentItem> data,String introduce, String other_lan) {
         imageViewer.setUrl(url);
         commentAdapter.setData(data);
-        imageViewer.setFocusableInTouchMode(true);
-        imageViewer.requestFocus();
+        introduces.setText(introduce);
+        langs.setText(other_lan);
+        translated.setFocusableInTouchMode(true);
+        translated.requestFocus();
 //        nestedScrollView.fullScroll(View.FOCUS_UP);
 //        editText.clearFocus();
 //        nestedScrollView.scrollTo(0,0);

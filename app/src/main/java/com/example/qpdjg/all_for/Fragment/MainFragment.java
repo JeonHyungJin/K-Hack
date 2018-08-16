@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.qpdjg.all_for.Adater.ViewpagerAdapter;
 import com.example.qpdjg.all_for.R;
 
 import java.io.IOException;
@@ -40,6 +39,15 @@ public class MainFragment extends Fragment {
         suggest.setText(R.string.suggest);
         best.setText(R.string.best);
         ad.setText(R.string.ad);
+
+        LinearLayout baemin = linearLayout.findViewById(R.id.horizon_app1);
+        baemin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewPager.setCurrentItem(4);
+                viewPager.getView().setAppCall("배달의민족","delivery");
+            }
+        });
 
         TextView textView1 = (TextView) linearLayout.findViewById(R.id.horizon_description1_2);
         TextView textView2 = (TextView) linearLayout.findViewById(R.id.horizon_description2_2);
@@ -119,5 +127,3 @@ public class MainFragment extends Fragment {
         this.viewPager = viewPager;
     }
 }
-//viewPager.setCurrentItem(4);
-//viewPager.getViewpagerAdapter().setAppCall(toAppCall,category);

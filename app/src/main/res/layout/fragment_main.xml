@@ -40,7 +40,7 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="160dp"
+                    android:layout_height="170dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -55,20 +55,21 @@
                             android:layout_height="90dp"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="5dp"
-                            android:src="@mipmap/ic_launcher"  />
+                            android:src="@mipmap/ic_launcher" />
 
                         <TextView
                             android:id="@+id/horizon_description1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Kakao Place"
-                            android:textColor="#000000"/>
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/horizon_description1_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Restaurant" />
 
                     </LinearLayout>
@@ -93,14 +94,15 @@
                             android:id="@+id/horizon_description2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="요기요(Yogiyo)"
-                            android:textColor="#000000"/>
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/horizon_description2_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Food Delivery" />
 
 
@@ -120,19 +122,21 @@
                             android:layout_centerHorizontal="true"
                             android:layout_margin="5dp"
                             android:src="@mipmap/ic_launcher" />
+
                         <TextView
                             android:id="@+id/horizon_description3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Kakao T"
-                            android:textColor="#000000"/>
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/horizon_description3_2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Transport" />
+                            android:layout_height="44dp"
+                            android:gravity="left"
+                            android:text="Public Transport" />
 
                     </LinearLayout>
 
@@ -155,14 +159,15 @@
                             android:id="@+id/horizon_description4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="직방"
-                            android:textColor="#000000"/>
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/horizon_description4_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="Real Property" />
 
                     </LinearLayout>
@@ -187,14 +192,15 @@
                             android:id="@+id/horizon_description5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="대한민국 구석구석"
-                            android:textColor="#000000"/>
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/horizon_description5_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="left"
                             android:text="travel" />
 
                     </LinearLayout>
@@ -203,6 +209,8 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
@@ -221,125 +229,126 @@
                 android:visibility="visible">
 
                 <TextView
+                    android:id="@+id/best_t"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:text="Best Apps"
-                    android:id="@+id/best_t"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/best_icon1"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/ic_launcher" />
-
-                        <TextView
-                            android:id="@+id/best_description1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Mango Plate"
-                            android:textColor="#000000"/>
-                        <TextView
-                            android:id="@+id/best_description1_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Restaurant" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/best_icon2"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/ic_launcher" />
-
-                        <TextView
-                            android:id="@+id/best_description2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="배달의 민족"
-                            android:textColor="#000000"/>
-
-                        <TextView
-                            android:id="@+id/best_description2_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Food Delivery" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/best_icon3"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="5dp"
-                            android:src="@mipmap/ic_launcher" />
-
-                        <TextView
-                            android:id="@+id/best_description3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="카카오버스"
-                            android:textColor="#000000"/>
-                        <TextView
-                            android:id="@+id/best_description3_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Transport" />
-
-                    </LinearLayout>
-                </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/best_icon1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/best_description1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Mango Plate"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/best_description1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Restaurant" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/best_icon2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/best_description2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="배달의 민족"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/best_description2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Food Delivery" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/best_icon3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/best_description3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="카카오버스"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/best_description3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="left"
+                    android:text="Transport" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="1.5dp"
             android:background="#E9EDF0"
             android:orientation="vertical"></LinearLayout>
-
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -353,12 +362,12 @@
 
 
                 <TextView
+                    android:id="@+id/ad_t"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:text="AD"
-                    android:id="@+id/ad_t"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 

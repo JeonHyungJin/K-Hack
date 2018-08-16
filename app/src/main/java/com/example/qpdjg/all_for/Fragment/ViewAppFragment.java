@@ -38,6 +38,7 @@ public class ViewAppFragment extends Fragment {
     String name;
     String url;
     String downloadUrl;
+    String app_introduction;
     int rank;
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
@@ -142,14 +143,23 @@ public class ViewAppFragment extends Fragment {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("chienese_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
+                            app_introduction = ds.child("chienese").child("app_explain").getValue().toString();
                         }else if (strLanguage == "ja") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("japan_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
+                            app_introduction = ds.child("japanese").child("app_explain").getValue().toString();
+                        }else if(strLanguage == "ko"){
+                            for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
+                                urlArray.add(ds3.getValue().toString().trim());
+                            }
+                            app_introduction = ds.child("korean").child("app_explain").getValue().toString();
                         }else{
                             for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
+                            app_introduction = ds.child("english").child("app_explain").getValue().toString();
+                            System.out.println(app_introduction);
                         }
 
                         int aver_rank = 0;

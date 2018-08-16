@@ -39,6 +39,7 @@ public class ViewAppFragment extends Fragment {
     String url;
     String downloadUrl;
     String app_introduction;
+    String other_lan;
     int rank;
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
@@ -133,7 +134,7 @@ public class ViewAppFragment extends Fragment {
                     if (appCall.equals(ds.getKey().toString())) {
                         comment.clear();
                         urlArray.clear();
-
+                        other_lan = ds.child("other_lang").getValue().toString().trim();
                         name = ds.getKey();
                         url = ds.child("app_img").getValue().toString().trim();
 

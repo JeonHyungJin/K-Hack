@@ -31,7 +31,7 @@
                         android:id="@+id/suggest_t"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="1dp"
                         android:layout_marginTop="8dp"
                         android:text="Suggested Apps"
                         android:textSize="16dp"
@@ -44,10 +44,13 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/horizon_app1"
                             android:layout_width="wrap_content"
                             android:layout_height="143dp"
-                            android:layout_margin="8dp"
-                            android:orientation="vertical">
+                            android:layout_margin="5dp"
+
+                            android:orientation="vertical"
+                            >
 
                             <ImageView
                                 android:id="@+id/horizon_icon1"
@@ -83,7 +86,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="5dp"
                             android:orientation="vertical">
 
 
@@ -99,20 +102,20 @@
                                 android:id="@+id/horizon_description2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="left"
                                 android:layout_marginLeft="3dp"
-                                android:textSize="12dp"
+                                android:gravity="left"
                                 android:text="요기요(Yogiyo)"
-                                android:textColor="#000000" />
+                                android:textColor="#000000"
+                                android:textSize="12dp" />
 
                             <TextView
                                 android:id="@+id/horizon_description2_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:gravity="left"
                                 android:layout_marginLeft="3dp"
-                                android:textSize="12dp"
-                                android:text="Food Delivery" />
+                                android:gravity="left"
+                                android:text="Food Delivery"
+                                android:textSize="12dp" />
 
 
                         </LinearLayout>
@@ -120,7 +123,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="5dp"
                             android:orientation="vertical">
 
 
@@ -156,7 +159,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="5dp"
                             android:orientation="vertical">
 
 
@@ -193,7 +196,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
+                            android:layout_margin="5dp"
                             android:orientation="vertical">
 
 
@@ -252,7 +255,7 @@
                         android:id="@+id/best_t"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:text="Best Apps"
                         android:textSize="16dp"
@@ -307,7 +310,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_margin="5dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -343,7 +346,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_margin="5dp"
                     android:orientation="vertical">
 
 
@@ -398,7 +401,7 @@
                         android:id="@+id/ad_t"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:text="AD"
                         android:textSize="16dp"

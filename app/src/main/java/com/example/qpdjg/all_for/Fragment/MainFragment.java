@@ -41,7 +41,7 @@ public class MainFragment extends Fragment {
         best.setText(R.string.best);
         ad.setText(R.string.ad);
 
-        LinearLayout baemin = linearLayout.findViewById(R.id.horizon_app1);
+        LinearLayout baemin = linearLayout.findViewById(R.id.Baemin_Layout);
         baemin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

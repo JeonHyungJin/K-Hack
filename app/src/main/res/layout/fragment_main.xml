@@ -308,6 +308,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/Baemin_Layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -325,20 +326,20 @@
                         android:id="@+id/best_description2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
                         android:gravity="left"
                         android:text="배달의 민족"
                         android:textColor="#000000"
-                        android:layout_marginLeft="3dp"
-                        android:textSize="12dp"/>
+                        android:textSize="12dp" />
 
                     <TextView
                         android:id="@+id/best_description2_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
                         android:gravity="left"
                         android:text="Food Delivery"
-                        android:layout_marginLeft="3dp"
-                        android:textSize="12dp"/>
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>

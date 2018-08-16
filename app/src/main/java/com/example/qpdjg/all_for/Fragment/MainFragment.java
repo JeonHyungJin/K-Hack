@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.qpdjg.all_for.Custom.CustomViewPager;
 import com.example.qpdjg.all_for.R;
 
 import java.io.IOException;
@@ -22,7 +23,7 @@ import java.net.URL;
 
 public class MainFragment extends Fragment {
     Bitmap bitmap;
-    ViewPager viewPager;
+    CustomViewPager viewPager;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 viewPager.setCurrentItem(4);
-                viewPager.getView().setAppCall("배달의민족","delivery");
+                viewPager.getViewpagerAdapter().setAppCall("배달의민족","delivery");
             }
         });
 
@@ -123,7 +124,7 @@ public class MainFragment extends Fragment {
         }
     }
 
-    public void setViewPager(ViewPager viewPager) {
+    public void setViewPager(CustomViewPager viewPager) {
         this.viewPager = viewPager;
     }
 }

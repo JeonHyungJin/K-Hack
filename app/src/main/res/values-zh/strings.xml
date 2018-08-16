@@ -75,6 +75,8 @@
     <string name="register">登记。</string>
     <string name="comment_section">回帖</string>
     <string name="download">下载</string>
+    <string name="possible_other_lan">支援语言</string>
+
 </resources>
 
 

@@ -75,4 +75,5 @@
     <string name="register">Register</string>
     <string name="comment_section">Comments</string>
     <string name="download">Download</string>
+    <string name="possible_other_lan">Supported language</string>
 </resources>

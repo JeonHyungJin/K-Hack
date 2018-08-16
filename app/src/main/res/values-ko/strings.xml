@@ -75,4 +75,5 @@
     <string name="register">등록하기</string>
     <string name="comment_section">댓글</string>
     <string name="download">다운로드</string>
+    <string name="possible_other_lan">지원 언어</string>
 </resources>

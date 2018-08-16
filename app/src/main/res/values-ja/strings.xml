@@ -75,6 +75,7 @@
     <string name="register">登録する</string>
     <string name="comment_section">コメント</string>
     <string name="download">ダウンロード</string>
+    <string name="possible_other_lan">支援言語</string>
 </resources>
 
 

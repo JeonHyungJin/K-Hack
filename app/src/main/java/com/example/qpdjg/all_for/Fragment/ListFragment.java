@@ -2,6 +2,7 @@ package com.example.qpdjg.all_for.Fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -146,17 +147,25 @@ public class ListFragment extends Fragment {
 
 
     public void setData(ArrayList<String> url, ArrayList<CommentItem> data,String introduce, String other_lan) {
+
         imageViewer.setUrl(url);
         commentAdapter.setData(data);
         introduces.setText(introduce);
         langs.setText(other_lan);
         translated.setFocusableInTouchMode(true);
         translated.requestFocus();
+
+
 //        nestedScrollView.fullScroll(View.FOCUS_UP);
 //        editText.clearFocus();
 //        nestedScrollView.scrollTo(0,0);
 
 
+    }
+
+    public void  refresh(){
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
     }
 
 

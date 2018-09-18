@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,8 @@ public class ViewAppFragment extends Fragment {
     ArrayList<String> urlArray = new ArrayList<String>();
     ArrayList<CommentItem> comment = new ArrayList<CommentItem>();
     ListFragment fragment2 = new ListFragment();
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,10 @@ public class ViewAppFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout linearLayout = (LinearLayout) inflater.inflate(R.layout.fragment_appview, container, false);
 
+        fragmentManager = getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contentPanel, fragment2);
+        fragmentTransaction.commit();
 
         TextView translated = linearLayout.findViewById(R.id.translated);
         TextView Review = linearLayout.findViewById(R.id.Review);
@@ -81,11 +88,6 @@ public class ViewAppFragment extends Fragment {
         }
 
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel, fragment2);
-        fragmentTransaction.commit();
-
         star[0] = (ImageView) linearLayout.findViewById(R.id.detail_item_star1);
         star[1] = (ImageView) linearLayout.findViewById(R.id.detail_item_star2);
         star[2] = (ImageView) linearLayout.findViewById(R.id.detail_item_star3);
@@ -111,8 +113,7 @@ public class ViewAppFragment extends Fragment {
 
 
     public void setAppCall(final String appCall, String category) {
-
-
+        fragment2.refresh();
         this.appCall = appCall;
         this.category = category;
 
@@ -181,9 +182,9 @@ public class ViewAppFragment extends Fragment {
                         rank = aver_rank;
                     }
                 }
-                System.out.println("여기인가요"+comment.size());
                 fragment2.setData(urlArray, comment,app_introduction,other_lan);
                 setViews();
+
             }
 
             @Override

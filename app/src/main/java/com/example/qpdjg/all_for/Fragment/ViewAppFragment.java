@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.qpdjg.all_for.Activity.Non_DB_Activity;
 import com.example.qpdjg.all_for.Item.CommentItem;
 import com.example.qpdjg.all_for.R;
 import com.google.firebase.database.DataSnapshot;
@@ -47,6 +48,7 @@ public class ViewAppFragment extends Fragment {
     ListFragment fragment2 = new ListFragment();
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,27 +65,27 @@ public class ViewAppFragment extends Fragment {
 
         TextView translated = linearLayout.findViewById(R.id.translated);
         TextView Review = linearLayout.findViewById(R.id.Review);
-        TextView introduce =linearLayout.findViewById(R.id.Introduce);
+        TextView introduce = linearLayout.findViewById(R.id.Introduce);
         TextView regis = linearLayout.findViewById(R.id.register);
         TextView comment_section = linearLayout.findViewById(R.id.comment_section);
         TextView download_section = linearLayout.findViewById(R.id.download_button);
 
-        if(translated != null){
+        if (translated != null) {
             translated.setText(R.string.translated);
         }
-        if(Review != null){
+        if (Review != null) {
             Review.setText(R.string.review);
         }
-        if(introduce != null){
+        if (introduce != null) {
             introduce.setText(R.string.introduce);
         }
-        if(regis != null){
+        if (regis != null) {
             regis.setText(R.string.register);
         }
-        if(comment_section != null) {
+        if (comment_section != null) {
             comment_section.setText(R.string.comment_section);
         }
-        if(download_section != null) {
+        if (download_section != null) {
             download_section.setText(R.string.download);
         }
 
@@ -110,14 +112,12 @@ public class ViewAppFragment extends Fragment {
     }
 
 
-
-
     public void setAppCall(final String appCall, String category) {
         fragment2.refresh();
         this.appCall = appCall;
         this.category = category;
 
-        fragment2.get_now(appCall,category);
+        fragment2.get_now(appCall, category);
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
         DatabaseReference app_Ref = rootRef.child("app_category");
         DatabaseReference category_Ref = app_Ref.child(category);
@@ -146,17 +146,17 @@ public class ViewAppFragment extends Fragment {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
                             app_introduction = ds.child("chienese").child("app_explain").getValue().toString();
-                        }else if (strLanguage == "ja") {
+                        } else if (strLanguage == "ja") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("japan_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
                             app_introduction = ds.child("japanese").child("app_explain").getValue().toString();
-                        }else if(strLanguage == "ko"){
+                        } else if (strLanguage == "ko") {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
                             app_introduction = ds.child("korean").child("app_explain").getValue().toString();
-                        }else{
+                        } else {
                             for (DataSnapshot ds3 : ds.child("explain_img").child("english_img").getChildren()) {
                                 urlArray.add(ds3.getValue().toString().trim());
                             }
@@ -168,7 +168,7 @@ public class ViewAppFragment extends Fragment {
                         int comments_size = 0;
 
                         for (DataSnapshot ds2 : ds.child("comments").getChildren()) {
-                            CommentItem temp_comment = new CommentItem(ds2.child("rank").getValue().toString().trim(), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("contents").getValue().toString().trim());
+                            CommentItem temp_comment = new CommentItem(ds2.child("rank").getValue().toString().trim(), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("text").getValue().toString().trim());
                             comment.add(temp_comment);
 
                             aver_rank += Integer.parseInt(ds2.child("rank").getValue().toString().trim());
@@ -182,7 +182,12 @@ public class ViewAppFragment extends Fragment {
                         rank = aver_rank;
                     }
                 }
-                fragment2.setData(urlArray, comment,app_introduction,other_lan);
+                if (urlArray.size() != 0) {
+                    fragment2.setData(urlArray, comment, app_introduction, other_lan);
+                }else{
+                    Intent i = new Intent(getContext(),Non_DB_Activity.class);
+                    startActivity(i);
+                }
                 setViews();
 
             }

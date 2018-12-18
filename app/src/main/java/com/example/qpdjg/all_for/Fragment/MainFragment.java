@@ -50,6 +50,24 @@ public class MainFragment extends Fragment {
             }
         });
 
+        LinearLayout Mango = linearLayout.findViewById(R.id.Mango_Layout);
+        Mango.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(4);
+                viewPager.getViewpagerAdapter().setAppCall("MangoPlate","restaurant");
+            }
+        });
+
+        LinearLayout Korean_gugu = linearLayout.findViewById(R.id.Korean_gugu_Layout);
+        Korean_gugu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(4);
+                viewPager.getViewpagerAdapter().setAppCall("대한민국 구석구석","tour");
+            }
+        });
+
         TextView textView1 = (TextView) linearLayout.findViewById(R.id.horizon_description1_2);
         TextView textView2 = (TextView) linearLayout.findViewById(R.id.horizon_description2_2);
         TextView textView3 = (TextView) linearLayout.findViewById(R.id.horizon_description3_2);

@@ -10,14 +10,14 @@
         android:layout_height="40dp"
         android:background="@drawable/transport"
         android:layout_marginLeft="17dp"/>
+
     <TextView
         android:id="@+id/cataory_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="left|center"
         android:layout_marginLeft="7dp"
-        android:text="sdadasdasddsadjk"
-        android:textSize="18dp"
+        android:gravity="left|center"
+        android:text="Catego"
         android:textColor="#636363"
-        />
+        android:textSize="18dp" />
 </LinearLayout>

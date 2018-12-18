@@ -76,4 +76,6 @@
     <string name="comment_section">Comments</string>
     <string name="download">Download</string>
     <string name="possible_other_lan">Supported language</string>
+    <string name="db_working">Currently working on the DB.</string>
+
 </resources>

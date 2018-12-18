@@ -167,12 +167,14 @@ public class ViewAppFragment extends Fragment {
                         int aver_rank = 0;
                         int comments_size = 0;
 
-                        for (DataSnapshot ds2 : ds.child("comments").getChildren()) {
-                            CommentItem temp_comment = new CommentItem(ds2.child("rank").getValue().toString().trim(), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("text").getValue().toString().trim());
-                            comment.add(temp_comment);
+                        if (ds.child("comments") != null) {
+                            for (DataSnapshot ds2 : ds.child("comments").getChildren()) {
+                                CommentItem temp_comment = new CommentItem(ds2.child("rank").getValue().toString().trim(), ds2.child("date").getValue().toString().trim(), ds2.child("name").getValue().toString().trim(), ds2.child("text").getValue().toString().trim());
+                                comment.add(temp_comment);
 
-                            aver_rank += Integer.parseInt(ds2.child("rank").getValue().toString().trim());
-                            comments_size++;
+                                aver_rank += Integer.parseInt(ds2.child("rank").getValue().toString().trim());
+                                comments_size++;
+                            }
                         }
                         if (comments_size != 0) {
                             aver_rank = aver_rank / comments_size;
@@ -184,8 +186,8 @@ public class ViewAppFragment extends Fragment {
                 }
                 if (urlArray.size() != 0) {
                     fragment2.setData(urlArray, comment, app_introduction, other_lan);
-                }else{
-                    Intent i = new Intent(getContext(),Non_DB_Activity.class);
+                } else {
+                    Intent i = new Intent(getContext(), Non_DB_Activity.class);
                     startActivity(i);
                 }
                 setViews();

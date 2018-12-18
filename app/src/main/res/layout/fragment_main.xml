@@ -194,6 +194,7 @@
 
 
                         <LinearLayout
+                            android:id="@+id/Korean_gugu_Layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -271,6 +272,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/Mango_Layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"

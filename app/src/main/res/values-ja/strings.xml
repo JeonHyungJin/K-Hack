@@ -76,6 +76,8 @@
     <string name="comment_section">コメント</string>
     <string name="download">ダウンロード</string>
     <string name="possible_other_lan">支援言語</string>
+    <string name="db_working">現在DB構築作業中。</string>
+
 </resources>
 
 
